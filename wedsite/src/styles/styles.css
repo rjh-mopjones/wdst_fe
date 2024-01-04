@@ -2,7 +2,7 @@
 
 nav {
     background-color: #681c03;
-    padding: 15px;
+    padding: 10px;
 }
 
 ul {
@@ -16,9 +16,13 @@ li {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: green;
     color: white;
 }
 .active {
-    border-bottom: 2px solid white;
+    background-color: black;
+}
+
+.content {
+    padding: 100px; /* Adjust the padding to create space below the navbar */
 }

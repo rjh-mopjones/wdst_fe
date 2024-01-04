@@ -1,20 +1,43 @@
 // Navbar.js
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
+    const [activeItem, setActiveItem] = useState('Home');
+
+    const handleItemClick = (itemName) => {
+        setActiveItem(itemName);
+    };
+
     return (
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#itinerary">Itinerary</a></li>
-                <li><a href="#directions">Directions</a></li>
-                <li><a href="#accommodation">Accommodation</a></li>
-                <li><a href="#registry">Registry</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
+                <li className={activeItem === 'home' ? 'active' : ''} onClick={() => handleItemClick('home')}>
+                    <Link to="/">Home</Link>
+                </li>
+                <li className={activeItem === 'itinerary' ? 'active' : ''} onClick={() => handleItemClick('itinerary')}>
+                    <Link to="/itinerary">Itinerary</Link>
+                </li>
+                <li className={activeItem === 'directions' ? 'active' : ''}
+                    onClick={() => handleItemClick('directions')}>
+                    <Link to="/directions">Directions</Link>
+                </li>
+                <li className={activeItem === 'accommodation' ? 'active' : ''}
+                    onClick={() => handleItemClick('accommodation')}>
+                    <Link to="/accommodation">Accommodation</Link>
+                </li>
+                <li className={activeItem === 'registry' ? 'active' : ''}
+                    onClick={() => handleItemClick('registry')}>
+                    <Link to="/registry">Registry</Link>
+                </li>
+                <li className={activeItem === 'rsvp' ? 'active' : ''} onClick={() => handleItemClick('rsvp')}>
+                    <Link to="/rsvp">RSVP</Link>
+                </li>
             </ul>
         </nav>
-    );
+);
 };
 
 export default Navbar;
