@@ -7,7 +7,8 @@ import Itinerary from './components/Itinerary';
 import Registry from './components/Registry';
 import Accommodation from './components/Accommodation';
 import RSVP from './components/RSVP';
-import './styles/styles.css'; // Import your CSS file
+import './styles/styles.css';
+import FAQs from "./components/FAQs"; // Import your CSS file
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
                   <Route path="/directions" element={<Directions/>} />
                   <Route path="/accommodation" element={<Accommodation/>} />
                   <Route path="/registry" element={<Registry/>} />
+                  <Route path="/faqs" element={<FAQs/>} />
                   <Route path="/rsvp" element={<RSVP/>} />
               </Routes>
               </div>

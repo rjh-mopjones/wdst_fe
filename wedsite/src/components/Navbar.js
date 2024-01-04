@@ -32,12 +32,15 @@ const Navbar = () => {
                     onClick={() => handleItemClick('registry')}>
                     <Link to="/registry">Registry</Link>
                 </li>
+                <li className={activeItem === 'faqs' ? 'active' : ''} onClick={() => handleItemClick('faqs')}>
+                    <Link to="/faqs">FAQs</Link>
+                </li>
                 <li className={activeItem === 'rsvp' ? 'active' : ''} onClick={() => handleItemClick('rsvp')}>
                     <Link to="/rsvp">RSVP</Link>
                 </li>
             </ul>
         </nav>
-);
+    );
 };
 
 export default Navbar;
