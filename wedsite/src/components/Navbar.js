@@ -12,6 +12,8 @@ const Navbar = () => {
     };
 
     return (
+        <div className={'topBar'}>
+            <div><h1 className='title'>Mop & Ellie</h1></div>
         <nav>
             <ul>
                 <li className={activeItem === 'home' ? 'active' : ''} onClick={() => handleItemClick('home')}>
@@ -40,6 +42,7 @@ const Navbar = () => {
                 </li>
             </ul>
         </nav>
+        </div>
     );
 };
 
