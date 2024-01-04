@@ -1,0 +1,24 @@
+/* styles.css */
+
+nav {
+    background-color: #681c03;
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+.active {
+    border-bottom: 2px solid white;
+}
