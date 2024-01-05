@@ -16,7 +16,7 @@ import FAQs from "./components/FAQs"; // Import your CSS file
 const App = () => {
   return (
       <Router>
-          <div>
+          <div className={"page"}>
               <Navbar/>
               <div className="content">
               <Routes>

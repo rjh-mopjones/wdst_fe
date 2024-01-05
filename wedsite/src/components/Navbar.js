@@ -1,45 +1,29 @@
 // Navbar.js
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 
 const Navbar = () => {
-    const [activeItem, setActiveItem] = useState('Home');
-
-    const handleItemClick = (itemName) => {
-        setActiveItem(itemName);
+    const activeState = ({ isActive }) => {
+        return {
+            backgroundColor: isActive ? "rgb(69 26 3)" : "",
+            fontWeight: isActive ? "bold" : ""
+        };
     };
-
     return (
         <div className={'topBar'}>
             <div><h1 className='title'>Mop & Ellie</h1></div>
-        <nav>
+        <nav className={'navb'}>
             <ul>
-                <li className={activeItem === 'home' ? 'active' : ''} onClick={() => handleItemClick('home')}>
-                    <Link to="/">Home</Link>
-                </li>
-                <li className={activeItem === 'itinerary' ? 'active' : ''} onClick={() => handleItemClick('itinerary')}>
-                    <Link to="/itinerary">Itinerary</Link>
-                </li>
-                <li className={activeItem === 'directions' ? 'active' : ''}
-                    onClick={() => handleItemClick('directions')}>
-                    <Link to="/directions">Directions</Link>
-                </li>
-                <li className={activeItem === 'accommodation' ? 'active' : ''}
-                    onClick={() => handleItemClick('accommodation')}>
-                    <Link to="/accommodation">Accommodation</Link>
-                </li>
-                <li className={activeItem === 'registry' ? 'active' : ''}
-                    onClick={() => handleItemClick('registry')}>
-                    <Link to="/registry">Registry</Link>
-                </li>
-                <li className={activeItem === 'faqs' ? 'active' : ''} onClick={() => handleItemClick('faqs')}>
-                    <Link to="/faqs">FAQs</Link>
-                </li>
-                <li className={activeItem === 'rsvp' ? 'active' : ''} onClick={() => handleItemClick('rsvp')}>
-                    <Link to="/rsvp">RSVP</Link>
-                </li>
+                <li> <NavLink to='/' style={activeState}>Home</NavLink></li>
+                <li><NavLink to='/itinerary' style={activeState}>Itinerary</NavLink></li>
+                <li><NavLink to='/directions' style={activeState}>Directions</NavLink></li>
+                <li><NavLink to='/accommodation' style={activeState}>Accommodation</NavLink></li>
+                <li><NavLink to='/registry' style={activeState}>Registry</NavLink></li>
+                <li><NavLink to='/faqs' style={activeState}>FAQs</NavLink></li>
+                <li><NavLink to='/rsvp' style={activeState}>RSVP</NavLink></li>
             </ul>
         </nav>
         </div>

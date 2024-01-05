@@ -1,8 +1,7 @@
 /* styles.css */
 
 nav {
-    background-color: #681c03;
-    padding: 10px;
+    padding: 20px;
 }
 
 ul {
@@ -19,19 +18,72 @@ a {
     text-decoration: green;
     color: white;
 }
-.active {
-    background-color: black;
-}
+
 .title {
-    background-color: #681c03;
     text-align: center;
     color: white;
+    padding-top: 20px;
 }
 
 .topBar {
-    background-color: #681c03;
+    /*background-color: #995D6A;*/
+    background-color: #872932;
 }
 
 .content {
     padding: 100px; /* Adjust the padding to create space below the navbar */
+    background-color: #872932;
 }
+
+.page {
+    background-color: #872932;
+    text-align: center;
+    color: white;
+    white-space: pre-wrap;
+
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    /*min-height: 100vh;*/
+    background-color: #872932;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navb {
+    /*background-color: #995D6A;*/
+    background-color: #872932;
+    border-bottom: 1px solid white;
+}
+
+.navb ul {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+
+.navb ul a {
+    color: white;
+    text-decoration: none;
+    /*font-family: inter;*/
+    padding: 1em;
+}
+
+.navb ul a:hover {
+    border-bottom: 3px solid white;
+}
+
+.active {
+    color: #995D6A;
+}
+
