@@ -1,7 +1,7 @@
 /* styles.css */
 
 nav {
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 ul {
@@ -17,12 +17,13 @@ li {
 .title {
     text-align: center;
     color: white;
-    padding-top: 20px;
+    padding-bottom: 10px;
     font-size: 50px;
     font-family: "Apple LiSung";
 }
 
-.topbar {
+.topBar {
+   /*background-image:url("../static/sunset-website.jpeg") ;*/
     /*background-color: #E2725A;*/
 }
 
@@ -32,16 +33,17 @@ li {
     padding-right: 15px; /* Adjust the padding to create space below the navbar */
     justify-content: space-between;
     font-size: 20px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-family: "Apple LiSung", serif;
 
 }
 
 
 .content {
-    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+    /*padding-top: 100px; !* Adjust the padding to create space below the navbar *!*/
     font-family: "Apple LiSung";
 }
+
 
 .page {
     text-align: center;
@@ -64,6 +66,7 @@ html, body {
 }
 
 .navb {
+    padding-bottom: 3px;
     border-bottom: 1px solid white;
 }
 
@@ -91,3 +94,21 @@ html, body {
     color: #995D6A;
 }
 
+.itinerary {
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+}
+.directions {
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+}
+.accommodation {
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+}
+.registry{
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+}
+.faqs {
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+}
+.rsvp {
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+}

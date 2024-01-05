@@ -1,14 +1,14 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Directions from './components/Directions';
-import Itinerary from './components/Itinerary';
-import Registry from './components/Registry';
-import Accommodation from './components/Accommodation';
-import RSVP from './components/RSVP';
+import Home from './pages/Home';
+import Directions from './pages/Directions';
+import Itinerary from './pages/Itinerary';
+import Registry from './pages/Registry';
+import Accommodation from './pages/Accommodation';
+import RSVP from './pages/RSVP';
 import './styles/styles.css';
-import FAQs from "./components/FAQs"; // Import your CSS file
+import FAQs from "./pages/FAQs"; // Import your CSS file
 
 
 

@@ -9,7 +9,7 @@ const Navbar = () => {
     const activeState = ({ isActive }) => {
         return {
             backgroundColor: isActive ? "#62254D" : "",
-            fontWeight: isActive ? "bold" : ""
+            borderBottom: isActive ? "3px solid #62254D" : ""
         };
     };
     return (
@@ -20,7 +20,7 @@ const Navbar = () => {
                     <li>Treberfydd House, Brecon, Wales</li>
                 </ul>
             </div>
-            <div><h1 className='title'>Mop & Ellie</h1></div>
+            <div><h1 className='title'>Rory & Ellie</h1></div>
             <nav className={'navb'}>
                 <ul>
                     <li> <NavLink to='/' style={activeState}>Home</NavLink></li>
