@@ -14,29 +14,36 @@ li {
     margin: 0;
 }
 
-a {
-    text-decoration: green;
-    color: white;
-}
-
 .title {
     text-align: center;
     color: white;
     padding-top: 20px;
+    font-size: 50px;
+    font-family: "Apple LiSung";
 }
 
-.topBar {
-    /*background-color: #995D6A;*/
-    background-color: #872932;
+.topbar {
+    /*background-color: #E2725A;*/
 }
+
+.header {
+    padding-top: 10px; /* Adjust the padding to create space below the navbar */
+    padding-left: 15px; /* Adjust the padding to create space below the navbar */
+    padding-right: 15px; /* Adjust the padding to create space below the navbar */
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Apple LiSung", serif;
+
+}
+
 
 .content {
-    padding: 100px; /* Adjust the padding to create space below the navbar */
-    background-color: #872932;
+    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+    font-family: "Apple LiSung";
 }
 
 .page {
-    background-color: #872932;
     text-align: center;
     color: white;
     white-space: pre-wrap;
@@ -45,8 +52,7 @@ a {
 html, body {
     height: 100%;
     width: 100%;
-    /*min-height: 100vh;*/
-    background-color: #872932;
+    background: #594B6F;
 }
 
 *,
@@ -58,8 +64,6 @@ html, body {
 }
 
 .navb {
-    /*background-color: #995D6A;*/
-    background-color: #872932;
     border-bottom: 1px solid white;
 }
 
