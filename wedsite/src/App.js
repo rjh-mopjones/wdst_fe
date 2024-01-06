@@ -15,6 +15,11 @@ import FAQs from "./pages/FAQs"; // Import your CSS file
 
 const App = () => {
   return (
+      // TODO infinite scroll component
+      // TODO nav bar minimise
+      // TODO itinerary components
+      // TODO rsvp forms (auth, rsvp)
+      // TODO mobile compatibility
       <Router>
           <div className={"page"}>
               <Navbar/>

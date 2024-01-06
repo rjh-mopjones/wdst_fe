@@ -25,6 +25,22 @@ li {
 .topBar {
    /*background-image:url("../static/sunset-website.jpeg") ;*/
     /*background-color: #E2725A;*/
+    background: #62254D;
+}
+
+.itPhoto{
+    max-width: 25%;
+    max-height: 40%;
+    padding-top: 6%;
+    float: left;
+}
+
+.dirPhoto{
+    max-width: 25%;
+    max-height: 40%;
+    padding-top: 6%;
+    padding-right: 3%;
+    float: right;
 }
 
 .header {
@@ -54,7 +70,9 @@ li {
 html, body {
     height: 100%;
     width: 100%;
-    background: #594B6F;
+
+    /*background: #e7b4c6;*/
+    background: #62254D;
 }
 
 *,

@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const activeState = ({ isActive }) => {
         return {
-            backgroundColor: isActive ? "#62254D" : "",
+            backgroundColor: isActive ? "#995D6A" : "",
             borderBottom: isActive ? "3px solid #62254D" : ""
         };
     };
