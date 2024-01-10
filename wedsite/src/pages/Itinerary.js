@@ -3,7 +3,9 @@ import React from 'react';
 const Itinerary = () => {
     return (
         <div className={"itinerary"}>
-            <img className={"itPhoto"} src={require('../static/cuddles.png')}/>
+            <div className={"itPhotoWrap"}>
+                <img className={"itPhoto"} src={require('../static/cuddles.png')}/>
+            </div>
         </div>
     );
 };

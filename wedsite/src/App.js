@@ -15,24 +15,26 @@ import FAQs from "./pages/FAQs"; // Import your CSS file
 
 const App = () => {
   return (
-      // TODO infinite scroll component
-      // TODO nav bar minimise
+      // TODO nav bar minimise (homepage)
       // TODO itinerary components
       // TODO rsvp forms (auth, rsvp)
       // TODO mobile compatibility
+      // TODO sunset active navbar
       <Router>
           <div className={"page"}>
               <Navbar/>
               <div className="content">
-              <Routes>
-                  <Route path="/" element={<Home/>} />
-                  <Route path="/itinerary" element={<Itinerary/>} />
-                  <Route path="/directions" element={<Directions/>} />
-                  <Route path="/accommodation" element={<Accommodation/>} />
-                  <Route path="/registry" element={<Registry/>} />
-                  <Route path="/faqs" element={<FAQs/>} />
-                  <Route path="/rsvp" element={<RSVP/>} />
-              </Routes>
+                  <Routes>
+                      <Route path="/" element={<Home/>} />
+                      <Route path="/itinerary" element={<Itinerary/>} />
+                      <Route path="/directions" element={<Directions/>} />
+                      <Route path="/accommodation" element={<Accommodation/>} />
+                      <Route path="/registry" element={<Registry/>} />
+                      <Route path="/faqs" element={<FAQs/>} />
+                      <Route path="/rsvp" element={<RSVP/>} />
+                  </Routes>
+              </div>
+              <div className={"footer"}>
               </div>
           </div>
       </Router>
