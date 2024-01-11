@@ -22,9 +22,7 @@ const App = () => {
       // TODO sunset active navbar
       <Router>
           <div className={"page"}>
-              <div className={"divBar"}>
               <Navbar/>
-              </div>
               <div className="content">
                   <Routes>
                       <Route path="/" element={<Home/>} />

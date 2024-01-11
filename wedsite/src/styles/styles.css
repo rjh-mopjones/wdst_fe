@@ -83,7 +83,7 @@ li {
 
 
 .content {
-    /*padding-top: 100px; !* Adjust the padding to create space below the navbar *!*/
+    /*padding-top: 12%; !* Adjust the padding to create space below the navbar *!*/
     font-family: "Apple LiSung";
 }
 
@@ -111,7 +111,7 @@ html, body {
 }
 
 .divBar {
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
 
 }
@@ -122,6 +122,7 @@ html, body {
     /*position: fixed;*/
     width: 100%;
     overflow: hidden;
+    background: #62254D;
 
 }
 
