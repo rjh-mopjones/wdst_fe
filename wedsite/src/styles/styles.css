@@ -28,6 +28,7 @@ li {
     /*background-color: #E2725A;*/
     background: #62254D;
 }
+
 .footer{
     border-top: 1px solid white;
     padding-bottom: 5%;
@@ -109,9 +110,19 @@ html, body {
     margin: 0;
 }
 
+.divBar {
+    /*position: fixed;*/
+    width: 100%;
+
+}
+
 .navb {
     padding-bottom: 3px;
     border-bottom: 1px solid white;
+    /*position: fixed;*/
+    width: 100%;
+    overflow: hidden;
+
 }
 
 .navb ul {
