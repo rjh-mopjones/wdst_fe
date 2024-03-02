@@ -62,6 +62,21 @@ li {
     float: left;
 }
 
+.itinerary-entry{
+    overflow: auto;
+    padding-top: 2%;
+}
+.itinerary-entries{
+    padding-top: 3%;
+}
+
+.itinerary-entry-child{
+        width: 50%;
+        float: left;
+        padding-top: 1%;
+        padding-bottom: 1%;
+}
+
 .dirPhoto{
     max-width: 25%;
     max-height: 40%;
@@ -69,6 +84,14 @@ li {
     padding-right: 3%;
     float: right;
 }
+
+.white-border-left{
+    border-left: 1px solid white;
+}
+.white-border-right{
+    border-right: 1px solid white;
+}
+
 
 .header {
     padding-top: 10px; /* Adjust the padding to create space below the navbar */
@@ -84,6 +107,7 @@ li {
 
 .content {
     /*padding-top: 12%; !* Adjust the padding to create space below the navbar *!*/
+    overflow: auto;
     font-family: "Apple LiSung";
 }
 
@@ -151,7 +175,7 @@ html, body {
 }
 
 .itinerary {
-    padding-top: 100px; /* Adjust the padding to create space below the navbar */
+    padding-top: 12%; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
     padding-bottom: 10%;
 }
@@ -179,4 +203,8 @@ html, body {
     padding-top: 100px; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
     padding-bottom: 10%;
+}
+
+.itInnerList{
+    width:150%
 }
