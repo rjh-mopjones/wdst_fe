@@ -15,7 +15,6 @@ import FAQs from "./pages/FAQs"; // Import your CSS file
 
 const App = () => {
   return (
-      // TODO itinerary components
       // TODO arrows move tabs
       // TODO rsvp forms (auth, rsvp)
       // TODO mobile compatibility

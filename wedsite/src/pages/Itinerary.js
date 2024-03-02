@@ -1,7 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ItineraryEntry from "../components/ItineraryEntry";
 
 const Itinerary = () => {
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            switch (event.key) {
+                case 'ArrowLeft':
+                    window.location.href = '/';
+                    break;
+                case 'ArrowRight':
+                    window.location.href = '/directions';
+                    break;
+                default:
+                // Do nothing for other keys
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+
+    }, []);
     return (
         <div className={"itinerary"}>
             <div className={"itPhotoWrap"}>
