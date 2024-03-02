@@ -77,10 +77,16 @@ li {
         padding-bottom: 1%;
 }
 
+.embedded-map{
+    padding-top: 10%;
+    float: left;
+    padding-left: 3%;
+}
+
 .dirPhoto{
     max-width: 25%;
     max-height: 40%;
-    padding-top: 6%;
+    padding-top: 9%;
     padding-right: 3%;
     float: right;
 }
