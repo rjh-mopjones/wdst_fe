@@ -15,9 +15,9 @@ import FAQs from "./pages/FAQs"; // Import your CSS file
 
 const App = () => {
   return (
-      // TODO rsvp forms (auth, rsvp)
+      // TODO rsvp forms (auth, rsvp, meal)
+      // TODO make bottom line sam distance from the bottom of the viewport (protect the viewport)
       // TODO mobile compatibility
-      // TODO sunset active navbar
       <Router>
           <div className={"page"}>
               <Navbar/>

@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import RSVPForm from "../components/RSVPForm";
 
 const RSVP = () => {
     useEffect(() => {
@@ -23,8 +24,8 @@ const RSVP = () => {
     }, []);
 
     return (
-        <div className={"rsvp"}>
-            <h2>Répondez S'il Vous Plaît</h2>
+        <div className={"rsvp-form-div"}>
+            <RSVPForm/>
         </div>
     );
 };

@@ -32,8 +32,7 @@ li {
 .footer{
     border-top: 1px solid white;
     padding-bottom: 5%;
-
-
+    height: 5vh;
 }
 
 .homePhoto{
@@ -115,6 +114,7 @@ li {
     /*padding-top: 12%; !* Adjust the padding to create space below the navbar *!*/
     overflow: auto;
     font-family: "Apple LiSung";
+    min-height: calc(100vh - 170px);
 }
 
 
@@ -122,8 +122,11 @@ li {
     text-align: center;
     color: white;
     white-space: pre-wrap;
-
+    min-height: 100vh; /* or the minimum height of your content */
+    display: flex;
+    flex-flow: column nowrap;
 }
+
 html, body {
     height: 100%;
     width: 100%;
@@ -209,6 +212,11 @@ html, body {
     padding-top: 100px; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
     padding-bottom: 10%;
+}
+
+.rsvp-form-div {
+    padding-top: 20%;
+    padding-bottom: 20%;
 }
 
 .itInnerList{
