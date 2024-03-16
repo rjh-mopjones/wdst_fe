@@ -28,71 +28,107 @@ const FormExample = () => {
     };
 
     return (
-        <div>
-            <h1>Respondez S'il Vous plait</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    First Name:
-                    <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br/>
-                <label>
-                    Last Name:
-                    <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br/>
-                <label>
-                    Meal Option:
-                    <select id="mealOption" name="mealOption">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                </label>
-                <br/>
-                <label>
-                    Email:
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br/>
-                <label>
-                    Song Suggestions:
-                    <input
-                        type="text"
-                        name="song"
-                        value={formData.song}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br/>
-                <label>
-                    Message:
-                    <input
-                        type="text"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br/>
-                <button type="submit">Submit</button>
-            </form>
+        <div className="rsvp-form-container">
+            <h1 className="rsvp-title">RSVP</h1>
+
+            <div className="rsvp-form-submit">
+                <form onSubmit={handleSubmit}>
+                    <div className="rsvp-row">
+                        <div className="rsvp-col-25">
+                            <label>First Name: </label>
+                        </div>
+                        <div className="rsvp-col-75">
+                            <input
+                                type="text"
+                                name="firstName"
+                                value={formData.firstName}
+                                onChange={handleInputChange}
+                                placeholder={"Your first name(s)"}
+                                required="true"
+                            />
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="rsvp-row">
+                        <div className="rsvp-col-25">
+                            <label> Last Name: </label>
+                        </div>
+                        <div className="rsvp-col-75">
+                            <input
+                                type="text"
+                                name="lastName"
+                                value={formData.lastName}
+                                onChange={handleInputChange}
+                                placeholder={"Your last name(s)"}
+                                required="true"
+                            />
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="rsvp-row">
+                        <div className="rsvp-col-25">
+                            <label> Meal Option: </label>
+                        </div>
+                        <div className="rsvp-col-75">
+                            <select id="mealOption" name="mealOption">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="rsvp-row">
+                        <div className="rsvp-col-25">
+                            <label> Email: </label>
+                        </div>
+                        <div className="rsvp-col-75">
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                placeholder={"Your Email"}
+                                required="true"
+                            />
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="rsvp-row">
+                        <div className="rsvp-col-25">
+                            <label> Song Suggestions: </label>
+                        </div>
+                        <div className="rsvp-col-75">
+                            <input
+                                type="text"
+                                name="song"
+                                value={formData.song}
+                                onChange={handleInputChange}
+                                placeholder={"Suggest us a song you would like played! (Optional)"}
+                            />
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="rsvp-row">
+                        <div className="rsvp-col-25">
+                            <label> Additonal Message: </label>
+                        </div>
+                        <div className="rsvp-col-75">
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                placeholder={"Any additional questions or messages you want us to know? (Optional)"}
+                            />
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="rsvp-row">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    );
+);
 };
 
 export default FormExample;
