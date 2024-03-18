@@ -6,6 +6,13 @@
     border-radius: 20px;
     background-color: #872932;
     padding: 20px;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: block;
+    max-width: 100vh;
+
 }
 
 .rsvp-form-submit {
@@ -25,6 +32,14 @@ input[type=text], input[type=email], select, textarea{
     font-family:  serif ;
     font-size: Large;
 }
+
+input[type=checkbox]{
+    transform: scale(3);
+    float: left;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
 textarea{
     font-family: serif ;
 
