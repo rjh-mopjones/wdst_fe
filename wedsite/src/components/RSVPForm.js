@@ -60,8 +60,13 @@ const FormExample = () => {
         console.log('Form submitted:', formData);
     };
 
-    function handleReveal() {
-        setRsvpActive(wasRevealed => !wasRevealed)
+    const handleReveal = (event) => {
+        if (event.target.id === "yes") {
+            setRsvpActive(true)
+        } else {
+            setRsvpActive(false)
+        }
+
     }
 
     return (
@@ -90,20 +95,27 @@ const FormExample = () => {
                             <label>Are You Coming?: </label>
                         </div>
                         <div className="rsvp-col-75">
-                            <input
-                                onClick={handleReveal}
-                                type="checkbox"
-                                name="attendance"
-                                value={formData.attendance}
-                                onChange={handleInputChange}
-                                required="true"
-                            />
+                            <div className="rsvp-radio-buttons">
+                                <input type="radio" id="yes" name="attendance" value="yes" onClick={handleReveal}/>
+                                    <label htmlFor="yes" className="rsvp-radio-label">Yes</label>
+                                <input type="radio" id="no" name="attendance" value="no" onClick={handleReveal}/>
+                                    <label htmlFor="no" className="rsvp-radio-label">No</label>
+                                <br/>
+                            </div>
+                            {/*<input*/}
+                            {/*    onClick={handleReveal}*/}
+                            {/*    type="checkbox"*/}
+                            {/*    name="attendance"*/}
+                            {/*    value={formData.attendance}*/}
+                            {/*    onChange={handleInputChange}*/}
+                            {/*    required="true"*/}
+                            {/*/>*/}
                         </div>
                     </div>
-                    { isRsvpActive && (
+                    {isRsvpActive && (
                         <div id="rsvp-reveal">
                             <br/>
-                                <div className="rsvp-row">
+                            <div className="rsvp-row">
                                     <div className="rsvp-col-25">
                                         <label> Meal Option: </label>
                                     </div>
@@ -216,8 +228,10 @@ const FormExample = () => {
                         </div>
                     </div>
                     )}
+                    <div className="rsvp-submit-div">
                     <div className="rsvp-row">
                         <button type="submit">Submit</button>
+                    </div>
                     </div>
                 </form>
             </div>
