@@ -37,12 +37,12 @@ li {
 }
 
 .homePhoto{
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     width: auto;
 }
 .homePhoto2{
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     width: auto;
     padding-bottom: 10%;

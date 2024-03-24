@@ -133,6 +133,10 @@ button[type=submit]:hover {
     width: 55%;
     margin-top: 6px;
 }
+.rsvp-row{
+    min-height: 75px;
+
+}
 
 /* Clear floats after the columns */
 .rsvp-row:after {
@@ -160,6 +164,72 @@ button[type=submit]:hover {
     padding-top: 1%;
     padding-bottom: 1%;
 }
+/* TOGGLE STYLING */
+.rsvp-starter-toggle {
+    margin: 0 0 1.5rem;
+    box-sizing: border-box;
+    font-size: 0;
+    color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.rsvp-starter-toggle input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+}
+.rsvp-starter-toggle input + label {
+    margin: 0;
+    padding: 0.75rem 2rem;
+    box-sizing: border-box;
+    display: inline-block;
+    border: solid 1px #DDD;
+    background-color: #FFF;
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    transition: border-color 0.15s ease-out, color 0.25s ease-out, background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+    /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+    /* ----- */
+}
+.rsvp-starter-toggle input + label:first-of-type {
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+}
+.rsvp-starter-toggle input + label:last-of-type {
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+}
+.rsvp-starter-toggle input:hover + label {
+    border-color: #213140;
+}
+.rsvp-starter-toggle input:checked + label {
+    background-color: #4B9DEA;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+    border-color: #4B9DEA;
+    /*z-index: 1;*/
+}
+.rsvp-starter-toggle input:focus + label {
+    outline: dotted 1px #CCC;
+    outline-offset: 0.45rem;
+}
+@media (max-width: 800px) {
+    .rsvp-starter-toggle input + label {
+        padding: 0.75rem 0.25rem;
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
