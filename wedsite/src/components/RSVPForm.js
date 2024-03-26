@@ -10,34 +10,41 @@ const FormExample = () => {
         dessert: '',
         song: '',
         message: '',
-        attendance: 'false',
+        attendance: false,
     });
 
     const [additionalFormData, setAdditionalFormData] = useState([]);
-    const [isRsvpActive, setRsvpActive] = useState(false)
 
     // Event handler for input changes
     const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        console.log(name)
-        console.log(value)
+        let { name, value } = event.target;
+        if (name === 'attendance'){
+            value = value === 'true'
+        }
         setFormData({
             ...formData,
             [name]: value,
         });
+
     };
     const handleNestedInputChange = (event) => {
-        const {name, value} = event.target;
+        let {name, value} = event.target;
         const index = event.target.dataset.index
+        name = name.replace(index.toString(), "")
+
+        if (name === 'attendance'){
+            value = value === 'true'
+        }
+
         let data = [...additionalFormData]
-        data[index][name] = [value]
+        data[index][name] = value
         setAdditionalFormData(data)
     };
 
     const handleAddPerson = (event) => {
         let newPersonData = {
             fullName: '',
-            attendance: '',
+            attendance: false,
             starter: '',
             main: '',
             dessert: '',
@@ -63,15 +70,6 @@ const FormExample = () => {
         formData.additionalRSVP = additionalFormData;
         console.log('Form submitted:', formData);
     };
-
-    const handleReveal = (event) => {
-        if (event.target.id === "yes") {
-            setRsvpActive(true)
-        } else {
-            setRsvpActive(false)
-        }
-
-    }
 
     return (
         <div className="rsvp-form-container">
@@ -100,15 +98,15 @@ const FormExample = () => {
                         </div>
                         <div className="rsvp-col-75">
                             <div className="rsvp-radio-buttons">
-                                <input type="radio" id="yes" name="attendance" value="yes" onClick={handleReveal}/>
+                                <input type="radio" id="yes" name="attendance" value='true' onChange={handleInputChange}/>
                                     <label htmlFor="yes" className="rsvp-radio-label">Yes</label>
-                                <input type="radio" id="no" name="attendance" value="no" onClick={handleReveal}/>
+                                <input type="radio" id="no" name="attendance" value='false' onChange={handleInputChange}/>
                                     <label htmlFor="no" className="rsvp-radio-label">No</label>
                                 <br/>
                             </div>
                         </div>
                     </div>
-                    {isRsvpActive && (
+                    {formData.attendance && (
                         <div id="rsvp-reveal">
                             <br/>
                             <div className="rsvp-row">
@@ -204,6 +202,7 @@ const FormExample = () => {
                                             return (
                                                 <div className="rsvp-nested-respondent-wrapper" key={index}>
                                                     <div className="rsvp-nested-respondent" key={index}>
+                                                        <br/>
                                                         <div className={"rsvp-delete-person-button-div"}>
                                                             <button type="button" onClick={handleDeletePerson}
                                                                     data-index={index}
@@ -231,53 +230,96 @@ const FormExample = () => {
                                                         <br/>
                                                         <div className="rsvp-row">
                                                             <div className="rsvp-col-25">
-                                                                <label>Their Starter: </label>
+                                                                <label>Are They Coming?: </label>
                                                             </div>
                                                             <div className="rsvp-col-75">
-                                                                <div className="rsvp-starter-toggle">
-                                                                    <input type="radio" name="starter" value="starter1"
-                                                                           id={"starter1-index-" + index} data-index={index}
-                                                                           onChange={handleNestedInputChange} />
-                                                                    <label htmlFor={"starter1-index-"+ index}>starter 1</label>
-                                                                    <input type="radio" name="starter" value="starter2"
-                                                                           id={"starter2-index-" + index} data-index={index}
-                                                                           onChange={handleNestedInputChange} />
-                                                                    <label htmlFor={"starter2-index-" + index}>starter 2</label>
+                                                                <div className="rsvp-radio-buttons">
+                                                                    <input type="radio" id={"yes-index-"+index} name={"attendance" + index}
+                                                                           value="true" onClick={handleNestedInputChange}
+                                                                           data-index={index}/>
+                                                                    <label htmlFor={"yes-index-"+index}
+                                                                           className="rsvp-radio-label">Yes</label>
+                                                                    <input type="radio" id={"no-index-"+index} name={"attendance"+index}
+                                                                           value="false" onClick={handleNestedInputChange}
+                                                                           data-index={index}/>
+                                                                    <label htmlFor={"no-index-"+index}
+                                                                           className="rsvp-radio-label">No</label>
+                                                                    <br/>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <br/>
-                                                        <div className="rsvp-row">
-                                                            <div className="rsvp-col-25">
-                                                                <label>Their Main: </label>
-                                                            </div>
-                                                            <div className="rsvp-col-75">
-                                                                <div className="rsvp-starter-toggle">
-                                                                    <input type="radio" name="main" value="main1"
-                                                                        id={"main1-index-" + index} data-index={index} onChange={handleNestedInputChange} />
-                                                                    <label htmlFor={"main1-index-" + index}>main 1</label>
-                                                                    <input type="radio" name="main" value="main2" data-index={index}
-                                                                           id={"main2-index-" + index} onChange={handleNestedInputChange}/>
-                                                                    <label htmlFor={"main2-index-" + index}>main 2</label>
+                                                        {additionalFormData[index].attendance && (
+                                                            <div className={"rsvp-nested-meal"}>
+                                                                <div className="rsvp-row">
+                                                                    <div className="rsvp-col-25">
+                                                                        <label>Their Starter: </label>
+                                                                    </div>
+                                                                    <div className="rsvp-col-75">
+                                                                        <div className="rsvp-starter-toggle">
+                                                                            <input type="radio" name={"starter"+index} value="starter1"
+                                                                                   id={"starter1-index-" + index}
+                                                                                   data-index={index}
+                                                                                   onChange={handleNestedInputChange}/>
+                                                                            <label htmlFor={"starter1-index-" + index}>starter
+                                                                                1</label>
+                                                                            <input type="radio" name={"starter"+index} value="starter2"
+                                                                                   id={"starter2-index-" + index}
+                                                                                   data-index={index}
+                                                                                   onChange={handleNestedInputChange}/>
+                                                                            <label htmlFor={"starter2-index-" + index}>starter
+                                                                                2</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br/>
+                                                                <div className="rsvp-row">
+                                                                    <div className="rsvp-col-25">
+                                                                        <label>Their Main: </label>
+                                                                    </div>
+                                                                    <div className="rsvp-col-75">
+                                                                        <div className="rsvp-starter-toggle">
+                                                                            <input type="radio" name={"main"+index} value="main1"
+                                                                                   id={"main1-index-" + index}
+                                                                                   data-index={index}
+                                                                                   onChange={handleNestedInputChange}/>
+                                                                            <label htmlFor={"main1-index-" + index}>main
+                                                                                1</label>
+                                                                            <input type="radio" name={"main"+index} value="main2"
+                                                                                   data-index={index}
+                                                                                   id={"main2-index-" + index}
+                                                                                   onChange={handleNestedInputChange}/>
+                                                                            <label htmlFor={"main2-index-" + index}>main
+                                                                                2</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br/>
+                                                                <div className="rsvp-row">
+                                                                    <div className="rsvp-col-25">
+                                                                        <label>Their Dessert: </label>
+                                                                    </div>
+                                                                    <div className="rsvp-col-75">
+                                                                        <div className="rsvp-starter-toggle">
+                                                                            <input type="radio" name={"dessert"+index} value="dessert1"
+                                                                                   id={"dessert1-index-" + index}
+                                                                                   onChange={handleNestedInputChange}
+                                                                                   data-index={index}/>
+                                                                            <label htmlFor={"dessert1-index-" + index}>dessert
+                                                                                1</label>
+                                                                            <input type="radio" name={"dessert"+index} value="dessert2"
+                                                                                   id={"dessert2-index-" + index}
+                                                                                   onChange={handleNestedInputChange}
+                                                                                   data-index={index}/>
+                                                                            <label htmlFor={"dessert2-index-" + index}>dessert
+                                                                                2</label>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <br/>
-                                                        <div className="rsvp-row">
-                                                            <div className="rsvp-col-25">
-                                                                <label>Their Dessert: </label>
-                                                            </div>
-                                                            <div className="rsvp-col-75">
-                                                                <div className="rsvp-starter-toggle">
-                                                                    <input type="radio" name="dessert" value="dessert1"
-                                                                        id={"dessert1-index-" + index} onChange={handleNestedInputChange} data-index={index}/>
-                                                                    <label htmlFor={"dessert1-index-" + index}>dessert 1</label>
-                                                                    <input type="radio" name="dessert" value="dessert2"
-                                                                        id={"dessert2-index-" + index} onChange={handleNestedInputChange} data-index={index}/>
-                                                                    <label htmlFor={"dessert2-index-"+index}>dessert 2</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        )}
+
+
                                                         <br/>
                                                         <br/>
                                                     </div>
