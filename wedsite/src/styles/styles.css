@@ -115,6 +115,8 @@ li {
     /*padding-top: 12%; !* Adjust the padding to create space below the navbar *!*/
     overflow: auto;
     font-family: "Apple LiSung";
+    position: relative;
+    margin-top: 150px;
     min-height: calc(100vh - 170px);
 }
 

@@ -10,6 +10,7 @@ const FormExample = () => {
         dessert: '',
         song: '',
         message: '',
+        diet: '',
         attendance: false,
     });
 
@@ -45,6 +46,7 @@ const FormExample = () => {
         let newPersonData = {
             fullName: '',
             attendance: false,
+            diet: '',
             starter: '',
             main: '',
             dessert: '',
@@ -115,9 +117,11 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="starter" value="starter1" id="starter1" onChange={handleInputChange}/>
+                                        <input type="radio" name="starter" value="starter1" id="starter1"
+                                               onChange={handleInputChange}/>
                                         <label htmlFor="starter1">starter 1</label>
-                                        <input type="radio" name="starter" value="starter2" id="starter2" onChange={handleInputChange}/>
+                                        <input type="radio" name="starter" value="starter2" id="starter2"
+                                               onChange={handleInputChange}/>
                                         <label htmlFor="starter2">starter 2</label>
                                     </div>
                                 </div>
@@ -129,9 +133,11 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="main" value="main1" id="main1" onChange={handleInputChange}/>
+                                        <input type="radio" name="main" value="main1" id="main1"
+                                               onChange={handleInputChange}/>
                                         <label htmlFor="main1">main 1</label>
-                                        <input type="radio" name="main" value="main2" id="main2" onChange={handleInputChange}/>
+                                        <input type="radio" name="main" value="main2" id="main2"
+                                               onChange={handleInputChange}/>
                                         <label htmlFor="main2">main 2</label>
                                     </div>
                                 </div>
@@ -143,9 +149,11 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="dessert" value="dessert1" id="dessert1" onChange={handleInputChange}/>
+                                        <input type="radio" name="dessert" value="dessert1" id="dessert1"
+                                               onChange={handleInputChange}/>
                                         <label htmlFor="dessert1">dessert 1</label>
-                                        <input type="radio" name="dessert" value="dessert2" id="dessert2" onChange={handleInputChange}/>
+                                        <input type="radio" name="dessert" value="dessert2" id="dessert2"
+                                               onChange={handleInputChange}/>
                                         <label htmlFor="dessert2">dessert 2</label>
                                     </div>
                                 </div>
@@ -163,6 +171,21 @@ const FormExample = () => {
                                         onChange={handleInputChange}
                                         placeholder={"Your Email"}
                                         required="true"
+                                    />
+                                </div>
+                            </div>
+                            <br/>
+                            <div className="rsvp-row">
+                                <div className="rsvp-col-25">
+                                    <label> Dietary Requirements: </label>
+                                </div>
+                                <div className="rsvp-col-75">
+                                    <input
+                                        type="text"
+                                        name="diet"
+                                        value={formData.diet}
+                                        onChange={handleInputChange}
+                                        placeholder={"Please let us know if you have dietary requirements (Optional)"}
                                     />
                                 </div>
                             </div>
@@ -234,15 +257,17 @@ const FormExample = () => {
                                                             </div>
                                                             <div className="rsvp-col-75">
                                                                 <div className="rsvp-radio-buttons">
-                                                                    <input type="radio" id={"yes-index-"+index} name={"attendance" + index}
+                                                                    <input type="radio" id={"yes-index-" + index}
+                                                                           name={"attendance" + index}
                                                                            value="true" onClick={handleNestedInputChange}
                                                                            data-index={index}/>
-                                                                    <label htmlFor={"yes-index-"+index}
+                                                                    <label htmlFor={"yes-index-" + index}
                                                                            className="rsvp-radio-label">Yes</label>
-                                                                    <input type="radio" id={"no-index-"+index} name={"attendance"+index}
+                                                                    <input type="radio" id={"no-index-" + index}
+                                                                           name={"attendance" + index}
                                                                            value="false" onClick={handleNestedInputChange}
                                                                            data-index={index}/>
-                                                                    <label htmlFor={"no-index-"+index}
+                                                                    <label htmlFor={"no-index-" + index}
                                                                            className="rsvp-radio-label">No</label>
                                                                     <br/>
                                                                 </div>
@@ -253,17 +278,35 @@ const FormExample = () => {
                                                             <div className={"rsvp-nested-meal"}>
                                                                 <div className="rsvp-row">
                                                                     <div className="rsvp-col-25">
+                                                                        <label> Dietary Requirements: </label>
+                                                                    </div>
+                                                                    <div className="rsvp-col-75">
+                                                                        <input
+                                                                            type="text"
+                                                                            name="diet"
+                                                                            value={additionalFormData[index].diet}
+                                                                            data-index={index}
+                                                                            onChange={handleNestedInputChange}
+                                                                            placeholder={"Please let us know if you have dietary requirements (Optional)"}
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <br/>
+                                                                <div className="rsvp-row">
+                                                                    <div className="rsvp-col-25">
                                                                         <label>Their Starter: </label>
                                                                     </div>
                                                                     <div className="rsvp-col-75">
                                                                         <div className="rsvp-starter-toggle">
-                                                                            <input type="radio" name={"starter"+index} value="starter1"
+                                                                            <input type="radio" name={"starter" + index}
+                                                                                   value="starter1"
                                                                                    id={"starter1-index-" + index}
                                                                                    data-index={index}
                                                                                    onChange={handleNestedInputChange}/>
                                                                             <label htmlFor={"starter1-index-" + index}>starter
                                                                                 1</label>
-                                                                            <input type="radio" name={"starter"+index} value="starter2"
+                                                                            <input type="radio" name={"starter" + index}
+                                                                                   value="starter2"
                                                                                    id={"starter2-index-" + index}
                                                                                    data-index={index}
                                                                                    onChange={handleNestedInputChange}/>
@@ -279,13 +322,15 @@ const FormExample = () => {
                                                                     </div>
                                                                     <div className="rsvp-col-75">
                                                                         <div className="rsvp-starter-toggle">
-                                                                            <input type="radio" name={"main"+index} value="main1"
+                                                                            <input type="radio" name={"main" + index}
+                                                                                   value="main1"
                                                                                    id={"main1-index-" + index}
                                                                                    data-index={index}
                                                                                    onChange={handleNestedInputChange}/>
                                                                             <label htmlFor={"main1-index-" + index}>main
                                                                                 1</label>
-                                                                            <input type="radio" name={"main"+index} value="main2"
+                                                                            <input type="radio" name={"main" + index}
+                                                                                   value="main2"
                                                                                    data-index={index}
                                                                                    id={"main2-index-" + index}
                                                                                    onChange={handleNestedInputChange}/>
@@ -301,13 +346,15 @@ const FormExample = () => {
                                                                     </div>
                                                                     <div className="rsvp-col-75">
                                                                         <div className="rsvp-starter-toggle">
-                                                                            <input type="radio" name={"dessert"+index} value="dessert1"
+                                                                            <input type="radio" name={"dessert" + index}
+                                                                                   value="dessert1"
                                                                                    id={"dessert1-index-" + index}
                                                                                    onChange={handleNestedInputChange}
                                                                                    data-index={index}/>
                                                                             <label htmlFor={"dessert1-index-" + index}>dessert
                                                                                 1</label>
-                                                                            <input type="radio" name={"dessert"+index} value="dessert2"
+                                                                            <input type="radio" name={"dessert" + index}
+                                                                                   value="dessert2"
                                                                                    id={"dessert2-index-" + index}
                                                                                    onChange={handleNestedInputChange}
                                                                                    data-index={index}/>
