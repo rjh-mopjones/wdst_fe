@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 
 const Accommodation = () => {
+    // TODO get a list of hotels
+    // TODO can camp if you want but need to let us know
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {

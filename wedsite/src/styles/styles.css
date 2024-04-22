@@ -56,9 +56,8 @@ li {
 }
 
 .itPhoto{
-    max-width: 25%;
+    max-width: 30%;
     max-height: 40%;
-    padding-top: 6%;
     float: left;
 }
 
@@ -116,7 +115,7 @@ li {
     overflow: auto;
     font-family: "Apple LiSung";
     position: relative;
-    margin-top: 150px;
+    top: 150px;
     min-height: calc(100vh - 170px);
 }
 
@@ -147,8 +146,18 @@ html, body {
 }
 
 .divBar {
+    z-index: 999;
     position: fixed;
     width: 100%;
+
+}
+.treb-house{
+
+}
+.treb-photo{
+    max-width: 100%;
+    height: auto;
+    width: auto;
 
 }
 
@@ -187,12 +196,11 @@ html, body {
 }
 
 .itinerary {
-    padding-top: 12%; /* Adjust the padding to create space below the navbar */
+    padding-top: 5%; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 .directions {
-    padding-top: 100px; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
     padding-bottom: 10%;
 }

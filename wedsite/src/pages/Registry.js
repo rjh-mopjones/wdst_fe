@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 
 const Registry = () => {
+    // TODO talk to tom about the experiences thing
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {

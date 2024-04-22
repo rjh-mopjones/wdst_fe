@@ -16,9 +16,12 @@ import FAQs from "./pages/FAQs"; // Import your CSS file
 
 const App = () => {
   return (
-      // TODO rsvp forms (auth, rsvp, meal)
-      // TODO make bottom line sam distance from the bottom of the viewport (protect the viewport)
       // TODO mobile compatibility
+      // TODO get drawing from eva and put it on home page
+      // TODO itinerary page put pic there (tbc but arrival by 12:30)
+      // TODO drections: parking available onsite
+      // TODO log to server log file
+      // TODO add flags for RSVP
       <Router>
           <div className={"page"}>
               <Navbar/>
@@ -32,8 +35,6 @@ const App = () => {
                       <Route path="/faqs" element={<FAQs/>} />
                       <Route path="/rsvp" element={<RSVP/>} />
                   </Routes>
-              </div>
-              <div className={"footer"}>
               </div>
           </div>
       </Router>

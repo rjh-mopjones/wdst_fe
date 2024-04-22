@@ -287,7 +287,7 @@ const FormExample = () => {
                                                                             value={additionalFormData[index].diet}
                                                                             data-index={index}
                                                                             onChange={handleNestedInputChange}
-                                                                            placeholder={"Please let us know if you have dietary requirements (Optional)"}
+                                                                            placeholder={"Please let us know if they have dietary requirements (Optional)"}
                                                                         />
                                                                     </div>
                                                                 </div>
