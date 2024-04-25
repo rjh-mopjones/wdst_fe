@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import ItineraryEntry from "../components/ItineraryEntry";
 
 const Itinerary = () => {
     useEffect(() => {
@@ -25,14 +24,18 @@ const Itinerary = () => {
     return (
         <div className={"itinerary"}>
             <div className={"itPhotoWrap"}>
-                <img className={"itPhoto"} src={require('../static/cuddles.png')}/>
+                <img className={"itPhoto"} src={require('../static/i-rest-my-legs.png')}/>
             </div>
-            <div className={"itinerary-entries"}>
-                <ItineraryEntry time="13:00" entry="Get Married"/>
-                <ItineraryEntry time="16:00" entry="Dinner"/>
-                <ItineraryEntry time="18:00" entry="Speeches"/>
-                <ItineraryEntry time="20:00" entry="Dancing"/>
+            <div className={"itinerary-text"}>
+                <h2>
+                    We will have a more fine-grained Itinerary closer to the time
+                </h2>
+                <br/>
+                <h2>
+                    For the time being, plan to get to Treberfydd House for 12:30pm 21st June 2025!
+                </h2>
             </div>
+
         </div>
     );
 };

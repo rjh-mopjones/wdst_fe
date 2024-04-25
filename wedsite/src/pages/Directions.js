@@ -35,9 +35,27 @@ const Directions = () => {
                     width="600" height="450" allowFullScreen="" loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
-            <div className={"dirPhotoWrap"}>
-                <img className={"dirPhoto"} src={require('../static/i-rest-my-legs.png')}/>
+            <div className={"dir-text"}>
+                <h2>How to get there from Newport</h2>
+                <br/>
+                <p>Get a train to Abergervenny (30 min taxi) or Brecon (15 min taxi) </p>
+                <br/>
+                <br/>
+                <h2>How to get there from London</h2>
+                <br/>
+                <p>Quickest way is to get a train to Newport, then get a train to Abergavenny (30 min taxi) or get a
+                    train to Brecon (15 min taxi)</p>
+                <br/>
+                <br/>
+                <h2>Driving</h2>
+                <br/>
+                <p>There will be parking available on site for people who are driving.</p>
+                <br/>
+                <br/>
+                <h2>Coaches</h2>
+                <br/>
+                <p>We are looking at providing coaches from Newport and Abergrvenny,
+                    these will be organised closer to the time and we will let you know!</p>
             </div>
         </div>
     );

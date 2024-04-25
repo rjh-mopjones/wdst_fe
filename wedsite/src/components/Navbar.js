@@ -43,22 +43,22 @@ const Navbar = () => {
                 <div className={'topBar'}>
                     <div>
                         <ul className={'header'}>
-                            <li>21st June 2025</li>
-                            <li>Treberfydd House, Brecon, Wales</li>
+                            <li className={"navbar-li"}>21st June 2025</li>
+                            <li className={"navbar-li"}>Treberfydd House, Brecon, Wales</li>
                         </ul>
                     </div>
                     <div><h1 className='title'>Rory & Ellie</h1></div>
                 </div>
             }
             <nav className={'navb'}>
-                <ul>
-                    <li> <NavLink to='/' style={activeState}>Home</NavLink></li>
-                    <li><NavLink to='/itinerary' style={activeState}>Itinerary</NavLink></li>
-                    <li><NavLink to='/directions' style={activeState}>Directions</NavLink></li>
-                    <li><NavLink to='/accommodation' style={activeState}>Accommodation</NavLink></li>
-                    <li><NavLink to='/registry' style={activeState}>Registry</NavLink></li>
-                    <li><NavLink to='/faqs' style={activeState}>FAQs</NavLink></li>
-                    <li><NavLink to='/rsvp' style={activeState}>RSVP</NavLink></li>
+                <ul className={"navbar-ul"}>
+                    <li className={"navbar-li"}> <NavLink to='/' style={activeState}>Home</NavLink></li>
+                    <li className={"navbar-li"}><NavLink to='/itinerary' style={activeState}>Itinerary</NavLink></li>
+                    <li className={"navbar-li"}><NavLink to='/directions' style={activeState}>Directions</NavLink></li>
+                    <li className={"navbar-li"}><NavLink to='/accommodation' style={activeState}>Accommodation</NavLink></li>
+                    <li className={"navbar-li"}><NavLink to='/registry' style={activeState}>Registry</NavLink></li>
+                    <li className={"navbar-li"}><NavLink to='/faqs' style={activeState}>FAQs</NavLink></li>
+                    <li className={"navbar-li"}><NavLink to='/rsvp' style={activeState}>RSVP</NavLink></li>
                 </ul>
             </nav>
         </div>
