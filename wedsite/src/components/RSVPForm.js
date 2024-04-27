@@ -71,6 +71,27 @@ const FormExample = () => {
         // You can perform form validation or submit data here
         formData.additionalRSVP = additionalFormData;
         console.log('Form submitted:', formData);
+        fetch("http://homeDomain:8000/rsvp", {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    console.log('response received:', response);
+                    throw new Error('Network response was not ok ');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data received:', data);
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+            });
     };
 
     return (

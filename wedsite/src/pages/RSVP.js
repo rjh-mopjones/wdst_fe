@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import RSVPForm from "../components/RSVPForm";
 
 const RSVP = () => {
+    // TODO do a "thanks for submitting"
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
