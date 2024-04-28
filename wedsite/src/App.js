@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Directions from './pages/Directions';
@@ -12,10 +13,15 @@ import './styles/rsvp.css';
 import FAQs from "./pages/FAQs"; // Import your CSS file
 
 
+export const NotSubmittedContext = React.createContext({
+    notSubmitted:true
+});
+
 
 
 const App = () => {
-  return (
+    const [notSubmitted, setNotSubmitted] = useState(NotSubmittedContext);
+    return (
       // TODO mobile compatibility
       // TODO get drawing from eva and put it on home page
       // TODO itinerary page put pic there (tbc but arrival by 12:30)
@@ -24,18 +30,20 @@ const App = () => {
       // TODO add flags for RSVP
       <Router>
           <div className={"page"}>
-              <Navbar/>
-              <div className="content">
-                  <Routes>
-                      <Route path="/" element={<Home/>} />
-                      <Route path="/itinerary" element={<Itinerary/>} />
-                      <Route path="/directions" element={<Directions/>} />
-                      <Route path="/accommodation" element={<Accommodation/>} />
-                      <Route path="/registry" element={<Registry/>} />
-                      <Route path="/faqs" element={<FAQs/>} />
-                      <Route path="/rsvp" element={<RSVP/>} />
-                  </Routes>
-              </div>
+              <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
+                  <Navbar/>
+                  <div className="content">
+                      <Routes>
+                          <Route path="/" element={<Home/>} />
+                          <Route path="/itinerary" element={<Itinerary/>} />
+                          <Route path="/directions" element={<Directions/>} />
+                          <Route path="/accommodation" element={<Accommodation/>} />
+                          <Route path="/registry" element={<Registry/>} />
+                          <Route path="/faqs" element={<FAQs/>} />
+                          <Route path="/rsvp" element={<RSVP/>} />
+                      </Routes>
+                  </div>
+              </NotSubmittedContext.Provider>
           </div>
       </Router>
   );

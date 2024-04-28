@@ -1,17 +1,19 @@
 import React, {useEffect} from 'react';
+import {useNavigate} from "react-router-dom";
 
 const Directions = () => {
     // TODO directions: parking available onsite
     // TODO directions: from london -> train to newport, abergavenny (30 min taxi), brecon (15min taxi) etc
     // TODO directions: from newport -> train to abergavenny (probably best to drive)
+    const routerNavigate = useNavigate();
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case 'ArrowLeft':
-                    window.location.href = '/itinerary';
+                    routerNavigate('/itinerary')
                     break;
                 case 'ArrowRight':
-                    window.location.href = '/accommodation';
+                    routerNavigate('/accommodation')
                     break;
                 default:
                 // Do nothing for other keys

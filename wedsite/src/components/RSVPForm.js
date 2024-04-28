@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
+import { NotSubmittedContext } from '../App';
+
 
 const FormExample = () => {
-    // State to hold form input values
+
+    const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
+
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -70,31 +74,36 @@ const FormExample = () => {
         event.preventDefault();
         // You can perform form validation or submit data here
         formData.additionalRSVP = additionalFormData;
-        console.log('Form submitted:', formData);
-        fetch("http://homeDomain:8000/rsvp", {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-            .then(response => {
-                if (!response.ok) {
-                    console.log('response received:', response);
-                    throw new Error('Network response was not ok ');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Data received:', data);
-            })
-            .catch(error => {
-                console.error('There was a problem with your fetch operation:', error);
-            });
+        console.log('Not Submitted Before: ', notSubmitted);
+        // console.log('Form submitted:', formData);
+        setNotSubmitted(!notSubmitted)
+        console.log('Not Submitted After: ', notSubmitted);
+        // fetch("http://homeDomain:8000/rsvp", {
+        //     method: 'POST',
+        //     mode: 'no-cors',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify(formData)
+        // })
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             console.log('response received:', response);
+        //             throw new Error('Network response was not ok ');
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         console.log('Data received:', data);
+        //     })
+        //     .catch(error => {
+        //         console.error('There was a problem with your fetch operation:', error);
+        //     });
     };
 
     return (
+        <div className={"rsvp-hide-div"}>
+        {notSubmitted && (
         <div className="rsvp-form-container">
             <h1 className="rsvp-title">RSVP</h1>
             <div className="rsvp-form-submit">
@@ -413,6 +422,8 @@ const FormExample = () => {
                 </form>
             </div>
         </div>
+        )}
+    </div>
     );
 };
 

@@ -1,16 +1,21 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import RSVPForm from "../components/RSVPForm";
+import { NotSubmittedContext } from '../App';
+import {useNavigate} from "react-router-dom";
 
 const RSVP = () => {
+    const {notSubmitted} = useContext(NotSubmittedContext);
+    const routerNavigate = useNavigate();
     // TODO do a "thanks for submitting"
     useEffect(() => {
         const handleKeyDown = (event) => {
+            console.log(notSubmitted)
             switch (event.key) {
                 case 'ArrowLeft':
-                    window.location.href = '/faqs';
+                    routerNavigate('/faqs')
                     break;
                 case 'ArrowRight':
-                    window.location.href = '/';
+                    routerNavigate('/')
                     break;
                 default:
                 // Do nothing for other keys
@@ -26,7 +31,9 @@ const RSVP = () => {
 
     return (
         <div className={"rsvp-form-div"}>
+            {/*{notSubmitted && (*/}
             <RSVPForm/>
+                {/*)}*/}
         </div>
     );
 };

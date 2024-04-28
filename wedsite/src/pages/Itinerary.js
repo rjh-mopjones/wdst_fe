@@ -1,14 +1,16 @@
 import React, {useEffect} from 'react';
+import {useNavigate} from "react-router-dom";
 
 const Itinerary = () => {
+    const routerNavigate = useNavigate();
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case 'ArrowLeft':
-                    window.location.href = '/';
+                    routerNavigate('/')
                     break;
                 case 'ArrowRight':
-                    window.location.href = '/directions';
+                    routerNavigate('/directions')
                     break;
                 default:
                 // Do nothing for other keys

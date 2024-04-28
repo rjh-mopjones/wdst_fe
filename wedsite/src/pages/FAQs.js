@@ -1,14 +1,16 @@
 import React, {useEffect} from 'react';
+import {useNavigate} from "react-router-dom";
 
 const FAQs= () => {
+    const routerNavigate = useNavigate();
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case 'ArrowLeft':
-                    window.location.href = '/registry';
+                    routerNavigate('/registry')
                     break;
                 case 'ArrowRight':
-                    window.location.href = '/rsvp';
+                    routerNavigate('/rsvp')
                     break;
                 default:
                 // Do nothing for other keys
