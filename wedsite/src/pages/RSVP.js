@@ -4,8 +4,9 @@ import { NotSubmittedContext } from '../App';
 import {useNavigate} from "react-router-dom";
 
 const RSVP = () => {
-    const {notSubmitted} = useContext(NotSubmittedContext);
+    const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
     const routerNavigate = useNavigate();
+
     // TODO do a "thanks for submitting"
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -31,9 +32,10 @@ const RSVP = () => {
 
     return (
         <div className={"rsvp-form-div"}>
-            {/*{notSubmitted && (*/}
+            {notSubmitted && (
             <RSVPForm/>
-                {/*)}*/}
+                )}
+
         </div>
     );
 };

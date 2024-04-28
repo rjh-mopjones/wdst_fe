@@ -103,7 +103,6 @@ const FormExample = () => {
 
     return (
         <div className={"rsvp-hide-div"}>
-        {notSubmitted && (
         <div className="rsvp-form-container">
             <h1 className="rsvp-title">RSVP</h1>
             <div className="rsvp-form-submit">
@@ -395,8 +394,6 @@ const FormExample = () => {
                                                                 </div>
                                                             </div>
                                                         )}
-
-
                                                         <br/>
                                                         <br/>
                                                     </div>
@@ -422,7 +419,6 @@ const FormExample = () => {
                 </form>
             </div>
         </div>
-        )}
     </div>
     );
 };
