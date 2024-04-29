@@ -28,8 +28,14 @@ const Accommodation = () => {
     }, []);
     return (
         <div className={"accommodation"}>
+            <div className={"accommodation-entries"}>
             <AccommodationEntry entry={"The Bear hotel"}
                                 notes={"Located in Crickhowell"} />
+            <AccommodationEntry entry={"The Bear hotel"}
+                                notes={"Located in Crickhowell"} />
+            <AccommodationEntry entry={"The Bear hotel"}
+                                notes={"Located in Crickhowell"} />
+            </div>
         </div>
     );
 };
