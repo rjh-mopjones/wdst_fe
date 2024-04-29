@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react';
-import { NotSubmittedContext } from '../App';
+import {NotSubmittedContext, UserNameContext} from '../App';
 
 
 const FormExample = () => {
 
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
+    const [userName, setUserName] = useContext(UserNameContext);
 
     const [formData, setFormData] = useState({
         fullName: '',
@@ -74,10 +75,10 @@ const FormExample = () => {
         event.preventDefault();
         // You can perform form validation or submit data here
         formData.additionalRSVP = additionalFormData;
-        console.log('Not Submitted Before: ', notSubmitted);
-        // console.log('Form submitted:', formData);
-        setNotSubmitted(!notSubmitted)
-        console.log('Not Submitted After: ', notSubmitted);
+        setNotSubmitted(false)
+
+        setUserName(formData.fullName.split(" ")[0])
+
         // fetch("http://homeDomain:8000/rsvp", {
         //     method: 'POST',
         //     mode: 'no-cors',

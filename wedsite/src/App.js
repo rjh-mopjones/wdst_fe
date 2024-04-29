@@ -17,20 +17,24 @@ export const NotSubmittedContext = React.createContext({
     notSubmitted:true
 });
 
+export const UserNameContext = React.createContext({
+    userName:""
+});
 
 
 const App = () => {
     const [notSubmitted, setNotSubmitted] = useState(NotSubmittedContext);
+    const [userName, setUserName] = useState(UserNameContext);
     return (
       // TODO mobile compatibility
       // TODO get drawing from eva and put it on home page
-      // TODO itinerary page put pic there (tbc but arrival by 12:30)
-      // TODO drections: parking available onsite
       // TODO log to server log file
-      // TODO add flags for RSVP
+      // TODO FAQs
+      // TODO Accommodation
       <Router>
           <div className={"page"}>
               <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
+              <UserNameContext.Provider value={[userName, setUserName]}>
                   <Navbar/>
                   <div className="content">
                       <Routes>
@@ -43,6 +47,7 @@ const App = () => {
                           <Route path="/rsvp" element={<RSVP/>} />
                       </Routes>
                   </div>
+              </UserNameContext.Provider>
               </NotSubmittedContext.Provider>
           </div>
       </Router>
