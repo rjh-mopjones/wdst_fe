@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
+import ItineraryEntry from "../components/ItineraryEntry";
 
 const Itinerary = () => {
     const routerNavigate = useNavigate();

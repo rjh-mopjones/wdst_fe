@@ -10,6 +10,7 @@ import Accommodation from './pages/Accommodation';
 import RSVP from './pages/RSVP';
 import './styles/styles.css';
 import './styles/rsvp.css';
+import './styles/accommodation.css';
 import FAQs from "./pages/FAQs"; // Import your CSS file
 
 

@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
+import AccommodationEntry from "../components/AccommodationEntry";
 
 const Accommodation = () => {
     // TODO get a list of hotels
@@ -27,8 +28,8 @@ const Accommodation = () => {
     }, []);
     return (
         <div className={"accommodation"}>
-                <h2>Welcome to the Accommodation Page</h2>
-                <p>This is the accommodation page content. Feel free to add more information here.</p>
+            <AccommodationEntry entry={"The Bear hotel"}
+                                notes={"Located in Crickhowell"} />
         </div>
     );
 };

@@ -1,0 +1,28 @@
+.accommodation-entry-photo-and-text {
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.accommodation-entry-entry {
+    padding-left: 2%;
+    padding-bottom: 1%;
+    text-align: left;
+}
+
+.accommodation-entry-notes{
+    text-align: left;
+    font-size: larger;
+    vertical-align: text-top;
+}
+.accommodation-entry{
+    left: 30%;
+    width: 150%;
+    position: absolute;
+    margin: auto;
+}
+.acommo-photo{
+    float: left;
+    padding-right: 2%;
+}
