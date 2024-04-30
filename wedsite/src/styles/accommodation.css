@@ -1,19 +1,29 @@
 .accommodation-entry-photo-and-text {
     display: flex;
-    width: 125%;
-
+    width: 175%;
 }
 
 .accommodation-entry-entry {
+    padding-top: 3%;
     padding-bottom: 3%;
     text-align: left;
 }
 
 .accommodation-entry-notes{
     text-align: left;
-    padding-left:10%;
+    padding-left:1%;
     font-size: larger;
     vertical-align: text-top;
+}
+
+.accommodation-entry-outer{
+    padding-right: 20%;
+    padding-bottom: 2%;
+
+}
+.accommodation-entry:hover{
+    border: 4px solid #d0d0d0;
+    border-radius: 40px;
 }
 .accommodation-entries{
     display: flex;
@@ -22,9 +32,13 @@
     align-items: center;
 }
 .accommodation-entry{
+    border: 4px solid transparent;
     margin: auto;
-    padding-bottom: 4%;
-    padding-right: 10%;
+    padding-bottom: 8%;
+    padding-right: 50%;
+    padding-left: 10%;
+    border-radius: 4px;
+    width: 175% ;
 }
 .acommo-photo{
     float: left;

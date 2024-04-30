@@ -30,11 +30,11 @@ const Accommodation = () => {
         <div className={"accommodation"}>
             <div className={"accommodation-entries"}>
             <AccommodationEntry entry={"The Bear hotel"}
-                                notes={"Located in Crickhowell"} />
-            <AccommodationEntry entry={"The Bear hotel"}
-                                notes={"Located in Crickhowell"} />
-            <AccommodationEntry entry={"The Bear hotel"}
-                                notes={"Located in Crickhowell"} />
+                                notes={"Located in Crickhowell"}
+                                link={"https://bearhotel.co.uk/"}/>
+                <AccommodationEntry entry={"The Bear hotel"}
+                                    notes={"Located in Crickhowell"}
+                                    link={"https://bearhotel.co.uk/"}/>
             </div>
         </div>
     );

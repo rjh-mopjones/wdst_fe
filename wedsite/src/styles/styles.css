@@ -99,6 +99,11 @@ nav {
     border-right: 1px solid white;
 }
 
+.link {
+    color: #FFF;
+    text-decoration: none;
+}
+
 
 .header {
     list-style: none;
