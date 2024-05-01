@@ -7,12 +7,10 @@ class AccommodationEntry extends React.Component {
     render() {
         return (
             <div className={"accommodation-entry-outer"}>
-                <Link to={this.props.link} className={"link"}>
+                <Link to={this.props.link} target="_blank" className={"link"}>
                 <div className={"accommodation-entry"}>
                     <div className={"accommodation-entry-entry-div"}>
-
                         <h1 className={"accommodation-entry-entry"}>{this.props.entry}</h1>
-
                     </div>
                     <div className={"accommodation-entry-photo-and-text"}>
                         <img className={"acommo-photo"} src={require('../static/accommodation/' +

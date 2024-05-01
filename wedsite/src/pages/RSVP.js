@@ -45,7 +45,7 @@ const RSVP = () => {
                 <div className={"rsvp-submitted-message"}>
                     <h2>Thanks for submitting the rsvp, {userName}!</h2>
                     <br/>
-                    <h2>If you would like to RSVP again, we will take your latest rsvp!</h2>
+                    <h2>If you would like to change your RSVP or any details, just RSVP again, we will take your latest one!</h2>
 
                     <div className={"rsvp-submit-again-div"}>
                         <button type="button" onClick={handleSubmitAgain} className="rsvp-submit-again-button">RSVP Again</button>

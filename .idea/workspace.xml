@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="971491ef-a259-4e8f-b449-e681715c338c" name="Changes" comment="add link and fix css of accommodation component">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wedsite/src/static/accommodation/brynderwen-farm.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wedsite/src/static/accommodation/the-castle-hotel.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wedsite/src/static/accommodation/the-star-bunkhouse.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wedsite/src/components/AccommodationEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/wedsite/src/components/AccommodationEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wedsite/src/pages/Accommodation.js" beforeDir="false" afterPath="$PROJECT_DIR$/wedsite/src/pages/Accommodation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wedsite/src/pages/RSVP.js" beforeDir="false" afterPath="$PROJECT_DIR$/wedsite/src/pages/RSVP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wedsite/src/styles/accommodation.css" beforeDir="false" afterPath="$PROJECT_DIR$/wedsite/src/styles/accommodation.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2aPxKcZyqK0A4DFKuKmAljRh78t" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Node.js.Itinerary.js.executor": "Run",
+    "Node.js._index.jsx.executor": "Run",
+    "Node.js.entry.client.jsx.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/roryhedderman/Documents/IdeaProjects/JavaScript/wdst_fe/wedsite/src/static/accommodation",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/roryhedderman/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wedsite/src/static/accommodation" />
+      <recent name="$PROJECT_DIR$/wedsite/src/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wedsite/src/static/accommodation" />
+      <recent name="$PROJECT_DIR$/wedsite/src" />
+      <recent name="$PROJECT_DIR$/wedsite/src/pages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="971491ef-a259-4e8f-b449-e681715c338c" name="Changes" comment="" />
+      <created>1704233954023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704233954023</updated>
+      <workItem from="1704233955386" duration="595000" />
+      <workItem from="1704234567682" duration="2405000" />
+      <workItem from="1704297915205" duration="18143000" />
+      <workItem from="1704475477049" duration="10540000" />
+      <workItem from="1704500481116" duration="18927000" />
+      <workItem from="1705782277279" duration="5965000" />
+      <workItem from="1707210844302" duration="7387000" />
+      <workItem from="1708857479929" duration="22900000" />
+      <workItem from="1710516166194" duration="18803000" />
+      <workItem from="1710646562651" duration="425000" />
+      <workItem from="1710647852650" duration="26381000" />
+      <workItem from="1712248730782" duration="33056000" />
+      <workItem from="1714169511730" duration="1559000" />
+      <workItem from="1714253935476" duration="11894000" />
+      <workItem from="1714312196965" duration="12332000" />
+      <workItem from="1714407766943" duration="15211000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1704401832021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704401832021</updated>
+    </task>
+    <task id="LOCAL-00002" summary="implement navbar">
+      <option name="closed" value="true" />
+      <created>1704404015850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704404015850</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add faqs page">
+      <option name="closed" value="true" />
+      <created>1704404421825</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704404421825</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add page title">
+      <option name="closed" value="true" />
+      <created>1704405019198</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704405019198</updated>
+    </task>
+    <task id="LOCAL-00005" summary="made navbar look a bit sexier">
+      <option name="closed" value="true" />
+      <created>1704469135044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704469135044</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add header">
+      <option name="closed" value="true" />
+      <created>1704473601279</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704473601279</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add photo">
+      <option name="closed" value="true" />
+      <created>1704489670106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704489670106</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add more photos">
+      <option name="closed" value="true" />
+      <created>1704501949076</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704501949076</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add footer">
+      <option name="closed" value="true" />
+      <created>1704921632291</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704921632291</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix navbar">
+      <option name="closed" value="true" />
+      <created>1705010539928</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705010539928</updated>
+    </task>
+    <task id="LOCAL-00011" summary="minimising navbar">
+      <option name="closed" value="true" />
+      <created>1705013416220</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705013416220</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add in itinerary component">
+      <option name="closed" value="true" />
+      <created>1709413853002</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709413853002</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add in keyboard navigation with arrows">
+      <option name="closed" value="true" />
+      <created>1709415665651</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709415665651</updated>
+    </task>
+    <task id="LOCAL-00014" summary="embed map for directions">
+      <option name="closed" value="true" />
+      <created>1709417131712</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709417131712</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add prototype form">
+      <option name="closed" value="true" />
+      <created>1710619647611</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710619647611</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add singular form">
+      <option name="closed" value="true" />
+      <created>1710624037570</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710624037570</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add ability to rsvp for more people">
+      <option name="closed" value="true" />
+      <created>1710633866152</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710633866152</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add checkbox for rsvp">
+      <option name="closed" value="true" />
+      <created>1710794480233</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710794480233</updated>
+    </task>
+    <task id="LOCAL-00019" summary="change rsvp checkbox to radio buttons">
+      <option name="closed" value="true" />
+      <created>1710798466580</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1710798466580</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add starter main dessert options">
+      <option name="closed" value="true" />
+      <created>1711318574794</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1711318574794</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add starter main dessert options for nested rsvp">
+      <option name="closed" value="true" />
+      <created>1711409324747</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1711409324747</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add rsvp tick for nested rsvp">
+      <option name="closed" value="true" />
+      <created>1711413201233</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1711413201233</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add positioning + dietary requirements">
+      <option name="closed" value="true" />
+      <created>1711658811290</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1711658811290</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fixed typos, added pics and added some todos">
+      <option name="closed" value="true" />
+      <created>1713809590665</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713809590665</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add write up to Itinerary and Directions">
+      <option name="closed" value="true" />
+      <created>1714070706521</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714070706521</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add backend communication">
+      <option name="closed" value="true" />
+      <created>1714261267789</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714261267789</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add fix to the page reloading on arrow presses, and added a global context for submitting the RSVP form">
+      <option name="closed" value="true" />
+      <created>1714334642764</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714334642764</updated>
+    </task>
+    <task id="LOCAL-00028" summary="move submit check to the middle component (the rsvp page)">
+      <option name="closed" value="true" />
+      <created>1714335253505</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1714335253505</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add ability to submit RSVP again">
+      <option name="closed" value="true" />
+      <created>1714407756934</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1714407756934</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add accommodation component">
+      <option name="closed" value="true" />
+      <created>1714414273381</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714414273381</updated>
+    </task>
+    <task id="LOCAL-00031" summary="refined styling of the accommodation component">
+      <option name="closed" value="true" />
+      <created>1714416895621</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714416895621</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add link and fix css of accommodation component">
+      <option name="closed" value="true" />
+      <created>1714499792798</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714499792798</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add more photos" />
+    <MESSAGE value="add footer" />
+    <MESSAGE value="fix navbar" />
+    <MESSAGE value="minimising navbar" />
+    <MESSAGE value="add in itinerary component" />
+    <MESSAGE value="add in keyboard navigation with arrows" />
+    <MESSAGE value="embed map for directions" />
+    <MESSAGE value="add prototype form" />
+    <MESSAGE value="add singular form" />
+    <MESSAGE value="add ability to rsvp for more people" />
+    <MESSAGE value="add checkbox for rsvp" />
+    <MESSAGE value="change rsvp checkbox to radio buttons" />
+    <MESSAGE value="add starter main dessert options" />
+    <MESSAGE value="add starter main dessert options for nested rsvp" />
+    <MESSAGE value="add rsvp tick for nested rsvp" />
+    <MESSAGE value="add positioning + dietary requirements" />
+    <MESSAGE value="fixed typos, added pics and added some todos" />
+    <MESSAGE value="add write up to Itinerary and Directions" />
+    <MESSAGE value="add backend communication" />
+    <MESSAGE value="add fix to the page reloading on arrow presses, and added a global context for submitting the RSVP form" />
+    <MESSAGE value="move submit check to the middle component (the rsvp page)" />
+    <MESSAGE value="add ability to submit RSVP again" />
+    <MESSAGE value="add accommodation component" />
+    <MESSAGE value="refined styling of the accommodation component" />
+    <MESSAGE value="add link and fix css of accommodation component" />
+    <option name="LAST_COMMIT_MESSAGE" value="add link and fix css of accommodation component" />
+  </component>
+</project>
