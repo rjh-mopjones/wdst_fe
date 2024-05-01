@@ -56,7 +56,7 @@ const Directions = () => {
                 <br/>
                 <h2>Coaches</h2>
                 <br/>
-                <p>We are looking at providing coaches from Newport and Abergrvenny,
+                <p>We are looking at providing coaches from Newport and Abergavenny,
                     these will be organised closer to the time and we will let you know!</p>
             </div>
         </div>

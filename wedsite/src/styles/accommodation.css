@@ -10,11 +10,10 @@
     text-align: left;
 }
 .accommodation-text-text{
-    text-align: left;
     padding-bottom: 2%;
+    text-align: center;
 }
 .accommodation-text-div{
-    text-align: left;
     padding-bottom: 5%;
     max-width:75%;
     margin:auto;
