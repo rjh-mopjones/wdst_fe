@@ -61,9 +61,9 @@ const Accommodation = () => {
             </div>
             <br/>
             <div className={"accommodation-text-div"}>
-                <h3 className={"accommodation-text-text"}>
-                    There are also a ton of options on AirBnb
-                </h3>
+                <h2 className={"accommodation-text-text"}>
+                    There are also a ton of options on AirBnb! Always get in contact if you need help
+                </h2>
             </div>
         </div>
     );

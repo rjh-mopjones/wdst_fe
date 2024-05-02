@@ -1,0 +1,28 @@
+.root {
+    /*border-radius: var(--mantine-radius-sm);*/
+    font-size: xxx-large;
+    border: 1px transparent;
+}
+.item{
+    color: black;
+    border: 1px transparent;
+    font-size: xx-large;
+    text-align: left;
+    background-color: #f88fbf;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.control{
+    border: 1px transparent;
+    border-radius: 10px;
+    background-color: #872932;
+    color: white;
+    font-size: xx-large;
+}
+.control:hover{
+    border: 1px transparent;
+    color: black;
+    font-size: xx-large;
+}

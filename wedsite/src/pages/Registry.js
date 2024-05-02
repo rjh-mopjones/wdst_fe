@@ -27,9 +27,15 @@ const Registry = () => {
 
     return (
         <div className={"registry"}>
-            <div className={"regWrap"}>
-                <h2>Welcome to the Registry Page</h2>
-                <p>This is the registry page content. Feel free to add more information here.</p>
+            <div className={"registry-wrap"}>
+                <h2 className={"registry-placeholder"}>
+                    I'm sure everyone is very anxious to shower us in gifts, but for the time being just plan to get
+                    there on the day!
+                </h2>
+                <br/>
+                <h2 className={"registry-placeholder"}>
+                    A registry is in the works
+                </h2>
             </div>
         </div>
     );

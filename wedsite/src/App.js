@@ -8,10 +8,15 @@ import Itinerary from './pages/Itinerary';
 import Registry from './pages/Registry';
 import Accommodation from './pages/Accommodation';
 import RSVP from './pages/RSVP';
+import '@mantine/core/styles/global.css';
+import '@mantine/core/styles.css';
 import './styles/styles.css';
 import './styles/rsvp.css';
+import './styles/registry.css';
 import './styles/accommodation.css';
-import FAQs from "./pages/FAQs"; // Import your CSS file
+import '@mantine/core/styles/Accordion.css';
+import FAQs from "./pages/FAQs";
+import {MantineProvider, createTheme, MantineColorsTuple} from "@mantine/core"; // Import your CSS file
 
 
 export const NotSubmittedContext = React.createContext({
@@ -22,6 +27,24 @@ export const UserNameContext = React.createContext({
     userName:""
 });
 
+const myColor = [
+    '#d30690',
+    '#eedfe9',
+    '#debad1',
+    '#cf93ba',
+    '#c172a4',
+    '#b95d99',
+    '#b65392',
+    '#a0437f',
+    '#8f3a71',
+    '#7e3063'
+];
+
+const theme = createTheme({
+    colors: {
+        myColor,
+    }
+});
 
 const App = () => {
     const [notSubmitted, setNotSubmitted] = useState(NotSubmittedContext);
@@ -34,6 +57,7 @@ const App = () => {
       // TODO Accommodation
       <Router>
           <div className={"page"}>
+              <MantineProvider theme={theme}>
               <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
               <UserNameContext.Provider value={[userName, setUserName]}>
                   <Navbar/>
@@ -50,6 +74,7 @@ const App = () => {
                   </div>
               </UserNameContext.Provider>
               </NotSubmittedContext.Provider>
+              </MantineProvider>
           </div>
       </Router>
   );
