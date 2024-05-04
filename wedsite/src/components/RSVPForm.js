@@ -149,10 +149,12 @@ const FormExample = () => {
                                     <div className="rsvp-starter-toggle">
                                         <input type="radio" name="starter" value="starter1" id="starter1"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="starter1">starter 1</label>
+                                        <label htmlFor="starter1">Lots and lots and lots and lots and lots and lots
+                                        of tinnies</label>
                                         <input type="radio" name="starter" value="starter2" id="starter2"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="starter2">starter 2</label>
+                                        <label htmlFor="starter2">more and more and more and more and more and more
+                                        of cans</label>
                                     </div>
                                 </div>
                             </div>
@@ -210,7 +212,7 @@ const FormExample = () => {
                                     <label> Dietary Requirements: </label>
                                 </div>
                                 <div className="rsvp-col-75">
-                                    <input
+                                    <textarea
                                         type="text"
                                         name="diet"
                                         value={formData.diet}
@@ -225,8 +227,7 @@ const FormExample = () => {
                                     <label> Song Suggestions: </label>
                                 </div>
                                 <div className="rsvp-col-75">
-                                    <input
-                                        type="text"
+                                    <textarea
                                         name="song"
                                         value={formData.song}
                                         onChange={handleInputChange}
@@ -255,17 +256,17 @@ const FormExample = () => {
                                             return (
                                                 <div className="rsvp-nested-respondent-wrapper" key={index}>
                                                     <div className="rsvp-nested-respondent" key={index}>
-                                                        <br/>
-                                                        <div className={"rsvp-delete-person-button-div"}>
-                                                            <button type="button" onClick={handleDeletePerson}
-                                                                    data-index={index}
-                                                                    className={"rsvp-delete-person-button"}>
-                                                                &#10006;
-                                                            </button>
-                                                        </div>
-                                                        <br/>
+                                                        {/*<br/>*/}
+                                                        {/*<div className={"rsvp-delete-person-button-div"}>*/}
+                                                        {/*</div>*/}
+                                                        {/*<br/>*/}
                                                         <div className="rsvp-row">
                                                             <div className="rsvp-col-25">
+                                                                <button type="button" onClick={handleDeletePerson}
+                                                                        data-index={index}
+                                                                        className={"rsvp-delete-person-button"}>
+                                                                    &#10006;
+                                                                </button>
                                                                 <label>Their Full Name: </label>
                                                             </div>
                                                             <div className="rsvp-col-75">
@@ -311,8 +312,7 @@ const FormExample = () => {
                                                                         <label> Dietary Requirements: </label>
                                                                     </div>
                                                                     <div className="rsvp-col-75">
-                                                                        <input
-                                                                            type="text"
+                                                                        <textarea
                                                                             name="diet"
                                                                             value={additionalFormData[index].diet}
                                                                             data-index={index}

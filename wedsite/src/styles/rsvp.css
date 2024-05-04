@@ -1,19 +1,17 @@
 .rsvp-form-div {
-    padding: 10%;
+    padding: 5%;
 }
 
 .rsvp-form-container {
     border-radius: 20px;
     background-color: #872932;
-    padding: 20px;
+    padding: 10px;
     position: static;
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100vh;
     box-shadow: 5px 5px 10px #494949;
-
-
 }
 
 .rsvp-form-submit {
@@ -43,7 +41,7 @@
 }
 
 input[type=text], input[type=email], select, textarea{
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -52,14 +50,27 @@ input[type=text], input[type=email], select, textarea{
     font-size: Large;
 }
 
-input[type=radio]{
-    height: 35px;
-    width: 35px;
-    margin: auto;
+/*input[type=radio]{*/
+/*    height: 35px;*/
+/*    width: 35px;*/
+/*    margin: auto;*/
+/*}*/
+input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    width: 40px;
+    height: 40px;
+}
+
+input[type='radio']:checked {
+    background: #333;
 }
 
 .rsvp-radio-label{
-    margin-right: 25%;
+    /*margin-right: 25%;*/
 }
 
 input[type=checkbox]{
@@ -75,6 +86,8 @@ textarea{
 }
 
 label {
+    float: left;
+    margin-left: 3%;
     padding: 12px 12px 12px 0;
     display: inline-block;
     font-family: "AppleMyungjo", serif ;
@@ -112,20 +125,17 @@ button[type=submit] {
     background-color: #EC3F13;
     color: white;
 }
-.rsvp-delete-person-button-div{
-    margin-right: 3%;
-    height: 2%;
-    overflow: hidden;
-}
-
 .rsvp-delete-person-button{
     float :right;
+    width: 10%;
     background-color: #872932;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     color: white;
     cursor: pointer;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 .rsvp-delete-person-button:hover{
@@ -174,7 +184,7 @@ button[type=submit]:hover {
 }
 .rsvp-nested-respondent{
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     padding-top: 3%;
     padding-bottom: 3%;
 }
@@ -184,7 +194,9 @@ button[type=submit]:hover {
 }
 /* TOGGLE STYLING */
 .rsvp-starter-toggle {
-    margin: 0 0 1.5rem;
+    /*margin: 0 0 1.5rem;*/
+    width: 95%;
+    margin-left: 3%;
     box-sizing: border-box;
     font-size: 0;
     color: black;
@@ -243,8 +255,9 @@ button[type=submit]:hover {
         padding: 0.75rem 0.25rem;
         flex: 0 0 50%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        text-align: left;
     }
 }
 

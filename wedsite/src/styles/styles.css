@@ -251,3 +251,7 @@ html, body {
 .itInnerList{
     width:150%
 }
+
+.mantine-Drawer-content	{
+    background: #62254D;
+}

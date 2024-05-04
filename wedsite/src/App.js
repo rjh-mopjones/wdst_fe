@@ -14,9 +14,10 @@ import './styles/styles.css';
 import './styles/rsvp.css';
 import './styles/registry.css';
 import './styles/accommodation.css';
+import './styles/navbar.css';
 import '@mantine/core/styles/Accordion.css';
 import FAQs from "./pages/FAQs";
-import {MantineProvider, createTheme, MantineColorsTuple} from "@mantine/core"; // Import your CSS file
+import {MantineProvider, createTheme} from "@mantine/core"; // Import your CSS file
 
 
 export const NotSubmittedContext = React.createContext({
@@ -53,8 +54,6 @@ const App = () => {
       // TODO mobile compatibility
       // TODO get drawing from eva and put it on home page
       // TODO log to server log file
-      // TODO FAQs
-      // TODO Accommodation
       <Router>
           <div className={"page"}>
               <MantineProvider theme={theme}>

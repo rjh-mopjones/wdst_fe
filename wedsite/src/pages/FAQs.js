@@ -3,15 +3,6 @@ import {useNavigate} from "react-router-dom";
 import {Accordion, AccordionControl, Text} from "@mantine/core";
 import classes from '../styles/FAQS.module.css';
 
-
-
-
-
-console.log(classes);
-
-
-
-
 const FAQs= () => {
     const routerNavigate = useNavigate();
     useEffect(() => {
@@ -75,10 +66,10 @@ const FAQs= () => {
                     <Accordion.Panel>Mainly for planning reasons, we are not offering +1s up front - if you would like one though, feel free
                                     to contact us</Accordion.Panel>
                 </Accordion.Item>
-            <Accordion.Item value="item-9">
-                <AccordionControl>How do I get there?</AccordionControl>
-                <Accordion.Panel>Brother, I spent a whole evening making a Directions section</Accordion.Panel>
-            </Accordion.Item>
+                <Accordion.Item value="item-9">
+                    <AccordionControl>How do I get there?</AccordionControl>
+                    <Accordion.Panel>Brother, I spent a whole evening making a Directions section</Accordion.Panel>
+                </Accordion.Item>
             </Accordion>
         </div>
     );
