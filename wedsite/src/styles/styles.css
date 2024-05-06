@@ -57,10 +57,18 @@ nav {
 }
 
 .itPhoto{
-    max-width: 30%;
-    max-height: 40%;
+    max-width: 50%;
     float: left;
-    margin-left: 5%;
+    margin: auto;
+}
+
+.it-photo-mob{
+    max-width: 80%;
+    margin: auto;
+}
+.itinerary-text-mob {
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .itinerary-entry{
@@ -164,9 +172,8 @@ html, body {
 
 }
 .treb-photo{
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    width: auto;
 
 }
 
@@ -254,4 +261,16 @@ html, body {
 
 .mantine-Drawer-content	{
     background: #62254D;
+}
+
+.home-photo-mob-1{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.home-photo-mob-2{
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
