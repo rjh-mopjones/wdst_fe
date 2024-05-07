@@ -171,9 +171,23 @@ html, body {
 .treb-house{
 
 }
+.treb-house-mob{
+    padding-bottom: 10%;
+}
+
+.embedded-map-mob{
+    padding-bottom: 10%;
+}
+
+.dir-text-mob{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .treb-photo{
     width: 100%;
     height: auto;
+
 
 }
 
@@ -242,6 +256,10 @@ html, body {
     padding-top: 100px; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
     padding-bottom: 10%;
+}
+.registry-wrap-mob{
+    margin-right: 10%;
+    margin-left: 10%;
 }
 .faqs {
     padding-top: 100px; /* Adjust the padding to create space below the navbar */

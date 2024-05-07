@@ -1,10 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import AccommodationEntry from "../components/AccommodationEntry";
+
+function isMob() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return width < 1000;
+}
 
 const Accommodation = () => {
     // TODO get a list of hotels
     // TODO can camp if you want but need to let us know
+    const [stateMobile, setMobileState] = useState(isMob);
     const routerNavigate = useNavigate();
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -20,6 +26,9 @@ const Accommodation = () => {
             }
         };
         window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener("resize", () => {
+            setMobileState(isMob)
+        });
 
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
@@ -46,7 +55,7 @@ const Accommodation = () => {
 
             </div>
             <div className={"accommodation-entries"}>
-            <AccommodationEntry entry={"The Bear hotel"}
+                <AccommodationEntry entry={"The Bear hotel"}
                                     notes={"Located in crickhowell, about a 15 min taxi away"}
                                 link={"https://bearhotel.co.uk/"}/>
                 <AccommodationEntry entry={"The Castle Hotel"}

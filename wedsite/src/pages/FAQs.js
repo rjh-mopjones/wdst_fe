@@ -27,10 +27,7 @@ const FAQs= () => {
     }, []);
     return (
         <div className={"faqs"}>
-            <Accordion chevronPosition="left" maw={1000} mx="auto" size="xxl" fz="lg" classNames={{root:classes.root,
-                item:classes.item,
-                text:classes.text, control:classes.control}}
-            >
+            <Accordion chevronPosition="left" maw={1000} mx="auto" size="xxl" fz="lg" classNames={classes}>
                 <Accordion.Item value="item-1" classNames={{text:classes.text}}>
                     <AccordionControl>Is there a Free Bar?</AccordionControl>
                     <Accordion.Panel>Yes</Accordion.Panel>

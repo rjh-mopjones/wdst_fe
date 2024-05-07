@@ -1,5 +1,4 @@
 .root {
-    /*border-radius: var(--mantine-radius-sm);*/
     font-size: xxx-large;
     border: 1px transparent;
 }
@@ -20,9 +19,13 @@
     background-color: #872932;
     color: white;
     font-size: xx-large;
+    &[data-active] {
+        color: black;
+        background-color: white;
+    }
 }
-.control:hover{
-    border: 1px transparent;
-    color: black;
-    font-size: xx-large;
-}
+/*.control:hover{*/
+/*    border: 1px transparent;*/
+/*    color: black;*/
+/*    font-size: xx-large;*/
+/*}*/
