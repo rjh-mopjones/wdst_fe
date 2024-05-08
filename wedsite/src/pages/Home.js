@@ -37,16 +37,23 @@ const Home = () => {
     return (
         <div className={"home"}>
             {stateMobile ?
-                <img className={"home-photo-mob-1"} src={require('../static/mobile/home-mob-1-sat.png')}/>
+                <div>
+                    <img className={"home-photo-mob-1"} src={require('../static/mobile/home-mob-1-sat.png')}/>
+                    <img className={"navbar-photo-mob"} src={require('../static/mobile/std-web-3.png')}/>
+                </div>
                 :
-                <img className={"homePhoto"} src={require('../static/home-photo-sm.png')}/>
+                <div>
+                    <img className={"homePhoto"} src={require('../static/home-photo-sm.png')}/>
+                    <img className={"navbar-photo"} src={require('../static/mobile/std-web-3.png')}/>
+                </div>
             }
-            <h1 className={"homeTitle"}>We are getting Married</h1>
-            {stateMobile  &&
-                <img className={"home-photo-mob-2"} src={require('../static/mobile/home-mob-2-sat.png')}/>
+            {
+            stateMobile &&
+            <img className={"home-photo-mob-2"} src={require('../static/mobile/home-mob-2-sat.png')}/>
             }
-        </div>
-    );
+</div>
+)
+    ;
 };
 
 export default Home;

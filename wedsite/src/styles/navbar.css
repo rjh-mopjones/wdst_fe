@@ -10,6 +10,19 @@
 .mob-navbar-li:hover {
     opacity:0.5;
 }
+.navbar-photo {
+  /*padding: 25%;*/
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 50%;
+}
+.navbar-photo-mob {
+    /*padding: 25%;*/
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 90%;
+}
+
 .mob-navlink{
     text-decoration: none;
     color: white;
@@ -153,4 +166,32 @@
 .mob-page-title{
     width: 90%;
     z-index: 0;
+}
+
+.topBar-mob {
+    background: #62254D;
+}
+
+.header-mob {
+    list-style: none;
+    display: flex;
+    padding-top: 10px; /* Adjust the padding to create space below the navbar */
+    padding-left: 15px; /* Adjust the padding to create space below the navbar */
+    padding-right: 15px; /* Adjust the padding to create space below the navbar */
+    justify-content: space-between;
+    font-size: 15px;
+    /*font-weight: bold;*/
+    font-family: "Apple LiSung", serif;
+}
+
+.navbar-li-mob {
+    margin: 0;
+}
+
+.title-mob {
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: "Apple LiSung", serif;
 }

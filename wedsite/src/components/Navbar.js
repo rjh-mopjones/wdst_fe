@@ -8,12 +8,9 @@ import drawClasses from '../styles/Draw.module.css';
 import {NavLink} from "react-router-dom";
 const { useState, useEffect } = React;
 
-function getWindowDimensions() {
+function isMob() {
     const { innerWidth: width, innerHeight: height } = window;
-    return {
-        width,
-        height
-    };
+    return width < 1000;
 }
 
 function getWindowName() {
@@ -29,22 +26,12 @@ function getWindowName() {
     return windowName.charAt(0).toUpperCase() + windowName.slice(1);
 }
 
-function isMob() {
-    return getWindowDimensions().width < 1000;
-}
-
 const Navbar = () => {
     const [burgerOpened, { toggle }] = useDisclosure();
     const [isVisible, setIsVisible] = useState(true);
     const [height, setHeight] = useState(0)
     const [stateMobile, setMobileState] = useState(isMob);
     const [pageName, setPageName] = useState(getWindowName);
-
-    // const [pageTitle, setPageTitle] = useState(defaultPageTitle());
-    // function defaultPageTitle() {
-    //     return ;
-    // }
-
 
     const screenSize = useRef();
     useEffect(() => {
@@ -94,15 +81,15 @@ const Navbar = () => {
             {
                 isVisible
                 &&
-                <div className={'topBar'}>
-                    <div>
-                        <ul className={'header'}>
-                            <li className={"navbar-li"}>21st June 2025</li>
-                            <li className={"navbar-li"}>Treberfydd House, Brecon, Wales</li>
-                        </ul>
+                    <div className={ stateMobile ? 'topBar-mob' : "topBar"}>
+                        <div>
+                            <ul className={stateMobile ? 'header-mob' : 'header'}>
+                                <li className={stateMobile ? "navbar-li-mob" : 'header'}>21st June 2025</li>
+                                <li className={stateMobile ? "navbar-li-mob" : 'header'}>Treberfydd House, Brecon, Wales</li>
+                            </ul>
+                        </div>
+                        <div><h1 className={stateMobile ? 'title-mob' : 'title'}>Rory & Ellie</h1></div>
                     </div>
-                    <div><h1 className='title'>Rory & Ellie</h1></div>
-                </div>
             }
 
 
