@@ -13,7 +13,6 @@ function isMob() {
     return width < 1000;
 }
 
-//TODO: Delete button still a bit funky
 //TODO: server log
 //TODO: favicon and title
 //TODO: changes title per domain

@@ -127,7 +127,7 @@ button[type=submit] {
 }
 .rsvp-delete-person-button{
     float :right;
-    width: 10%;
+    width: 50px;
     background-color: #872932;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
@@ -136,6 +136,7 @@ button[type=submit] {
     cursor: pointer;
     margin-right: 5%;
     margin-bottom: 5%;
+    margin-top:10px ;
 }
 
 .rsvp-delete-person-button:hover{

@@ -258,17 +258,13 @@ const FormExample = () => {
                                             return (
                                                 <div className="rsvp-nested-respondent-wrapper" key={index}>
                                                     <div className="rsvp-nested-respondent" key={index}>
-                                                        {/*<br/>*/}
-                                                        {/*<div className={"rsvp-delete-person-button-div"}>*/}
-                                                        {/*</div>*/}
-                                                        {/*<br/>*/}
+                                                        <button type="button" onClick={handleDeletePerson}
+                                                                data-index={index}
+                                                                className={"rsvp-delete-person-button"}>
+                                                            &#10006;
+                                                        </button>
                                                         <div className="rsvp-row">
                                                             <div className="rsvp-col-25">
-                                                                <button type="button" onClick={handleDeletePerson}
-                                                                        data-index={index}
-                                                                        className={"rsvp-delete-person-button"}>
-                                                                    &#10006;
-                                                                </button>
                                                                 <label>Their Full Name: </label>
                                                             </div>
                                                             <div className="rsvp-col-75">
@@ -292,13 +288,15 @@ const FormExample = () => {
                                                                 <div className="rsvp-radio-buttons">
                                                                     <input type="radio" id={"yes-index-" + index}
                                                                            name={"attendance" + index}
-                                                                           value="true" onClick={handleNestedInputChange}
+                                                                           value="true"
+                                                                           onClick={handleNestedInputChange}
                                                                            data-index={index}/>
                                                                     <label htmlFor={"yes-index-" + index}
                                                                            className="rsvp-radio-label">Yes</label>
                                                                     <input type="radio" id={"no-index-" + index}
                                                                            name={"attendance" + index}
-                                                                           value="false" onClick={handleNestedInputChange}
+                                                                           value="false"
+                                                                           onClick={handleNestedInputChange}
                                                                            data-index={index}/>
                                                                     <label htmlFor={"no-index-" + index}
                                                                            className="rsvp-radio-label">No</label>
