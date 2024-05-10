@@ -42,7 +42,7 @@ const FormExample = () => {
             value = value === 'true'
         }
 
-        let data = [...additionalFormData]
+        let data = [...additionalFormData.slice(0,5)]
         data[index][name] = value
         setAdditionalFormData(data)
     };
@@ -56,11 +56,13 @@ const FormExample = () => {
             main: '',
             dessert: '',
         }
-        setAdditionalFormData([
-            ...additionalFormData,
-            newPersonData
-        ]
-        )
+        if (additionalFormData.length < 4){
+            setAdditionalFormData([
+                    ...additionalFormData,
+                    newPersonData
+                ]
+            )
+        }
     };
     const handleDeletePerson = (event) => {
         const index = event.target.dataset.index
@@ -101,6 +103,7 @@ const FormExample = () => {
         //         console.error('There was a problem with your fetch operation:', error);
         //     });
     };
+
 
     return (
         <div className={"rsvp-hide-div"}>
