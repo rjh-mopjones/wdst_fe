@@ -69,7 +69,6 @@ const FormExample = () => {
         let data = [...additionalFormData]
         data.splice(index, 1)
         setAdditionalFormData(data)
-        console.log("DELETE: " + index)
     };
 
     // Event handler for form submission

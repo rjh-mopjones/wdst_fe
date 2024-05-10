@@ -5,7 +5,7 @@ import {Burger, Drawer} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import burgClasses from '../styles/Burg.module.css';
 import drawClasses from '../styles/Draw.module.css';
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 const { useState, useEffect } = React;
 
 function isMob() {
@@ -13,9 +13,19 @@ function isMob() {
     return width < 1000;
 }
 
+//TODO: Delete button still a bit funky
+//TODO: server log
+//TODO: favicon and title
+//TODO: changes title per domain
+//TODO: docker config
+
+function getPath(){
+    return window.location.pathname.replace("/", "")
+}
+
 function getWindowName() {
-    var windowName =  window.location.pathname.replace("/", "")
-    switch (windowName) {
+    let pathName = getPath();
+    switch (pathName) {
         case "":
             return "Home"
         case "rsvp":
@@ -23,8 +33,39 @@ function getWindowName() {
         case "faqs":
             return "FAQs"
     }
-    return windowName.charAt(0).toUpperCase() + windowName.slice(1);
+    return pathName.charAt(0).toUpperCase() + pathName.slice(1);
 }
+
+const routeMap= new Map([
+    ["", new Map([
+        ['ArrowLeft',  '/rsvp'],
+        ['ArrowRight', '/itinerary']
+    ])],
+    ['itinerary', new Map([
+        ['ArrowLeft',  '/'],
+        ['ArrowRight', '/directions']
+    ])],
+    ['directions', new Map([
+        ['ArrowLeft',  '/itinerary'],
+        ['ArrowRight', '/accommodation']
+    ])],
+    ['accommodation', new Map([
+        ['ArrowLeft',  '/directions'],
+        ['ArrowRight', '/registry']
+    ])],
+    ['registry', new Map([
+        ['ArrowLeft',  '/accommodation'],
+        ['ArrowRight', '/faqs']
+    ])],
+    ['faqs', new Map([
+        ['ArrowLeft',  '/registry'],
+        ['ArrowRight', '/rsvp']
+    ])],
+    ['rsvp', new Map([
+        ['ArrowLeft',  '/faqs'],
+        ['ArrowRight', '/']
+    ])],
+]);
 
 const Navbar = () => {
     const [burgerOpened, { toggle }] = useDisclosure();
@@ -32,21 +73,24 @@ const Navbar = () => {
     const [height, setHeight] = useState(0)
     const [stateMobile, setMobileState] = useState(isMob);
     const [pageName, setPageName] = useState(getWindowName);
+    const routerNavigate = useNavigate();
 
-    const screenSize = useRef();
+    const handleKeyDown = (event) => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight'){
+            routerNavigate(routeMap.get(getPath()).get(event.key))
+        }
+        setPageName(getWindowName)
+    };
+
     useEffect(() => {
         setPageName(getWindowName)
         window.addEventListener("resize", () => {
             setMobileState(isMob)
         });
-
+        window.addEventListener('keydown', handleKeyDown);
         window.addEventListener("scroll", listenToScroll);
         return () =>
-            window.removeEventListener("resize", () => {
-                screenSize.current = window.innerWidth;
-            });
-            window.removeEventListener("scroll", listenToScroll);
-
+            window.removeEventListener('keydown', handleKeyDown)
     }, [])
 
     const listenToScroll = () => {
@@ -62,11 +106,9 @@ const Navbar = () => {
         }
     };
     const handleRouting = (event) => {
-        console.log(getWindowName())
         setPageName( pageName=> {
             return event.target.id
         })
-
         toggle()
     }
 

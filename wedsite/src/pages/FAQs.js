@@ -1,30 +1,8 @@
-import React, {useEffect} from 'react';
-import {useNavigate} from "react-router-dom";
-import {Accordion, AccordionControl, Text} from "@mantine/core";
+import React from 'react';
+import {Accordion, AccordionControl} from "@mantine/core";
 import classes from '../styles/FAQS.module.css';
 
 const FAQs= () => {
-    const routerNavigate = useNavigate();
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            switch (event.key) {
-                case 'ArrowLeft':
-                    routerNavigate('/registry')
-                    break;
-                case 'ArrowRight':
-                    routerNavigate('/rsvp')
-                    break;
-                default:
-                // Do nothing for other keys
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-
-    }, []);
     return (
         <div className={"faqs"}>
             <Accordion chevronPosition="left" maw={1000} mx="auto" size="xxl" fz="lg" classNames={classes}>

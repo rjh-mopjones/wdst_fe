@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate} from "react-router-dom";
 
 function isMob() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -10,28 +9,12 @@ function isMob() {
 const Registry = () => {
     // TODO talk to tom about the experiences thing
     const [stateMobile, setMobileState] = useState(isMob);
-    const routerNavigate = useNavigate();
     useEffect(() => {
-        const handleKeyDown = (event) => {
-            switch (event.key) {
-                case 'ArrowLeft':
-                    routerNavigate('/accommodation')
-                    break;
-                case 'ArrowRight':
-                    routerNavigate('/faqs')
-                    break;
-                default:
-                // Do nothing for other keys
-            }
-        };
         window.addEventListener("resize", () => {
             setMobileState(isMob)
         });
-        window.addEventListener('keydown', handleKeyDown);
 
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
+        return () => {};
 
     }, []);
 

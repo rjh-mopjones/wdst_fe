@@ -51,7 +51,6 @@ const App = () => {
     const [notSubmitted, setNotSubmitted] = useState(NotSubmittedContext);
     const [userName, setUserName] = useState(UserNameContext);
     return (
-      // TODO get drawing from eva and put it on home page
       // TODO log to server log file
       <Router>
           <div className={"page"}>
