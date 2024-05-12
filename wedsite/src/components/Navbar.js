@@ -6,6 +6,7 @@ import { useDisclosure } from '@mantine/hooks';
 import burgClasses from '../styles/Burg.module.css';
 import drawClasses from '../styles/Draw.module.css';
 import {NavLink, useNavigate} from "react-router-dom";
+import logToServer from '../logging/logging'
 const { useState, useEffect } = React;
 
 function isMob() {
@@ -14,9 +15,16 @@ function isMob() {
 }
 
 //TODO: server log
-//TODO: favicon and title
-//TODO: changes title per domain
 //TODO: docker config
+
+function getMopOrRory(){
+    if (window.location.href.toLowerCase().includes("mop")){
+        document.title = 'Mop and Ellie';
+        return "Mop"
+    }
+    document.title = 'Rory and Ellie';
+    return "Rory"
+}
 
 function getPath(){
     return window.location.pathname.replace("/", "")
@@ -69,6 +77,7 @@ const routeMap= new Map([
 const Navbar = () => {
     const [burgerOpened, { toggle }] = useDisclosure();
     const [isVisible, setIsVisible] = useState(true);
+    const [mopOrRory, setMopOrRory] = useState("Rory");
     const [height, setHeight] = useState(0)
     const [stateMobile, setMobileState] = useState(isMob);
     const [pageName, setPageName] = useState(getWindowName);
@@ -86,6 +95,7 @@ const Navbar = () => {
         window.addEventListener("resize", () => {
             setMobileState(isMob)
         });
+        setMopOrRory(getMopOrRory)
         window.addEventListener('keydown', handleKeyDown);
         window.addEventListener("scroll", listenToScroll);
         return () =>
@@ -129,7 +139,7 @@ const Navbar = () => {
                                 <li className={stateMobile ? "navbar-li-mob" : 'header'}>Treberfydd House, Brecon, Wales</li>
                             </ul>
                         </div>
-                        <div><h1 className={stateMobile ? 'title-mob' : 'title'}>Rory & Ellie</h1></div>
+                        <div><h1 className={stateMobile ? 'title-mob' : 'title'}>{mopOrRory} & Ellie</h1></div>
                     </div>
             }
 

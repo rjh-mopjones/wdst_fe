@@ -57,7 +57,7 @@ nav {
 }
 
 .itPhoto{
-    max-width: 50%;
+    max-width: 40%;
     float: left;
     margin: auto;
 }
@@ -116,7 +116,7 @@ nav {
 .header {
     list-style: none;
     display: flex;
-    padding-top: 10px; /* Adjust the padding to create space below the navbar */
+    padding-top: 5px; /* Adjust the padding to create space below the navbar */
     padding-left: 15px; /* Adjust the padding to create space below the navbar */
     padding-right: 15px; /* Adjust the padding to create space below the navbar */
     justify-content: space-between;
