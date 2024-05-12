@@ -14,7 +14,6 @@ function isMob() {
     return width < 1000;
 }
 
-//TODO: server log
 //TODO: docker config
 
 function getMopOrRory(){
@@ -91,6 +90,7 @@ const Navbar = () => {
     };
 
     useEffect(() => {
+        logToServer("location from navbar component, "+ window.location.href)
         setPageName(getWindowName)
         window.addEventListener("resize", () => {
             setMobileState(isMob)
