@@ -80,7 +80,7 @@ const FormExample = () => {
 
         setUserName(formData.fullName.split(" ")[0])
 
-        // fetch("http://homeDomain:8000/rsvp", {
+        // fetch("process.env.REACT_APP_RSVP_ENDPOINT", {
         //     method: 'POST',
         //     mode: 'no-cors',
         //     headers: {
