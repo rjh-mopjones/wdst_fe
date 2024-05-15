@@ -14,7 +14,6 @@ function isMob() {
     return width < 1000;
 }
 
-//TODO: docker config
 
 function getMopOrRory(){
     if (window.location.href.toLowerCase().includes("mop")){

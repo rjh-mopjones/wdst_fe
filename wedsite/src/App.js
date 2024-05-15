@@ -51,7 +51,6 @@ const App = () => {
     const [notSubmitted, setNotSubmitted] = useState(NotSubmittedContext);
     const [userName, setUserName] = useState(UserNameContext);
     return (
-      // TODO log to server log file
       <Router>
           <div className={"page"}>
               <MantineProvider theme={theme}>
