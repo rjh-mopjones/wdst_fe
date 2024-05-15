@@ -10,14 +10,6 @@ function logToServer(message) {
         },
         body: message
     })
-        .then(response => {
-            if (!response.ok) {
-                console.error('Failed to log to server:', response.status);
-            }
-        })
-        .catch(error => {
-            console.error('Error while logging to server:', error);
-        });
 }
 
 export default logToServer
