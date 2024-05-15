@@ -80,27 +80,30 @@ const FormExample = () => {
 
         setUserName(formData.fullName.split(" ")[0])
 
-        // fetch("process.env.REACT_APP_RSVP_ENDPOINT", {
-        //     method: 'POST',
-        //     mode: 'no-cors',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(formData)
-        // })
-        //     .then(response => {
-        //         if (!response.ok) {
-        //             console.log('response received:', response);
-        //             throw new Error('Network response was not ok ');
-        //         }
-        //         return response.json();
-        //     })
-        //     .then(data => {
-        //         console.log('Data received:', data);
-        //     })
-        //     .catch(error => {
-        //         console.error('There was a problem with your fetch operation:', error);
-        //     });
+
+        const endpoint = process.env.REACT_APP_LOGGING_ENDPOINT
+        fetch(endpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+
+        })
+            .then(response => {
+                if (!response.ok) {
+                    console.log('response received:', response);
+                    throw new Error('Network response was not ok ');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data received:', data);
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+            });
     };
 
 

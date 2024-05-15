@@ -1,6 +1,5 @@
 function logToServer(message) {
-    // Replace 'https://logging-server.com/log' with your logging server endpoint
-    const endpoint = 'http://homeDomain:8000/log-server';
+    const endpoint = process.env.REACT_APP_LOGGING_ENDPOINT
 
     // Log object to send
     fetch(endpoint, {
