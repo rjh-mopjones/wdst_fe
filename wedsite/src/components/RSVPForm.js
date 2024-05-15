@@ -81,7 +81,7 @@ const FormExample = () => {
         setUserName(formData.fullName.split(" ")[0])
 
 
-        const endpoint = process.env.REACT_APP_LOGGING_ENDPOINT
+        const endpoint = process.env.REACT_APP_RSVP_ENDPOINT
         fetch(endpoint, {
             method: 'POST',
             mode: 'no-cors',
