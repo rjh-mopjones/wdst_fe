@@ -1,10 +1,14 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import RSVPForm from "../components/RSVPForm";
-import {NotSubmittedContext, UserNameContext} from '../App';
+import {LoadingContext, NotSubmittedContext, ReturnMessageContext, SubmitErrorContext, UserNameContext} from '../App';
+import {LineWave} from "react-loader-spinner";
+import {ClipLoader} from "react-spinners";
 
 const RSVP = () => {
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
-    const [userName, setUserName] = useContext(UserNameContext);
+    const [loading, setLoading] = useContext(LoadingContext);
+    const [message, setMessage] = useContext(ReturnMessageContext);
+    const [submitError, setSubmitError] = useContext(SubmitErrorContext);
 
     useEffect(() => {
 
@@ -22,19 +26,27 @@ const RSVP = () => {
             {notSubmitted && (
             <RSVPForm/>
                 )}
-            {!notSubmitted && (
-                <div className={"rsvp-submitted-message"}>
-                    <h2>Thanks for submitting the rsvp, {userName}!</h2>
-                    <br/>
-                    <h2>If you would like to change your RSVP or any details, just RSVP again, we will take your latest one!</h2>
+            {!notSubmitted && (loading ?
+                        <div className={"rsvp-loading"}>
+                            <h2>Loading...</h2>
+                            <div className={"rsvp-spinner"} style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+                                <ClipLoader  size={150} color={"white"} loading={loading} />
+                            </div>
+                        </div>
+                        :
+                        <div className={"rsvp-submitted-message"}>
+                            <h2>{message.toString()}</h2>
+                            <br/>
+                            <h2>If you would like to change your RSVP or any details, just RSVP again, we will take your
+                                latest one!</h2>
 
-                    <div className={"rsvp-submit-again-div"}>
-                        <button type="button" onClick={handleSubmitAgain} className="rsvp-submit-again-button">RSVP Again</button>
-                    </div>
-                </div>
-
-
-            )}
+                            <div className={"rsvp-submit-again-div"}>
+                                <button type="button" onClick={handleSubmitAgain}
+                                        className="rsvp-submit-again-button">RSVP Again
+                                </button>
+                            </div>
+                        </div>)
+            }
         </div>
     );
 };

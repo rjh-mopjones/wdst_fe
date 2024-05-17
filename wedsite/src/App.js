@@ -24,8 +24,16 @@ export const NotSubmittedContext = React.createContext({
     notSubmitted:true
 });
 
-export const UserNameContext = React.createContext({
-    userName:""
+export const ReturnMessageContext = React.createContext({
+    message:""
+});
+
+export const LoadingContext= React.createContext({
+   loading:false
+});
+
+export const SubmitErrorContext= React.createContext({
+    error:false
 });
 
 const myColor = [
@@ -49,13 +57,17 @@ const theme = createTheme({
 
 const App = () => {
     const [notSubmitted, setNotSubmitted] = useState(NotSubmittedContext);
-    const [userName, setUserName] = useState(UserNameContext);
+    const [submitError, setSubmitError] = useState(SubmitErrorContext);
+    const [loading, setLoading] = useState(LoadingContext);
+    const [message, setMessage] = useState(ReturnMessageContext);
     return (
       <Router>
           <div className={"page"}>
               <MantineProvider theme={theme}>
+              <SubmitErrorContext.Provider value={[submitError, setSubmitError]}>
+              <LoadingContext.Provider value={[loading, setLoading]}>
               <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
-              <UserNameContext.Provider value={[userName, setUserName]}>
+              <ReturnMessageContext.Provider value={[message, setMessage]}>
                   <Navbar/>
                   <div className="content">
                       <Routes>
@@ -68,8 +80,10 @@ const App = () => {
                           <Route path="/rsvp" element={<RSVP/>} />
                       </Routes>
                   </div>
-              </UserNameContext.Provider>
+              </ReturnMessageContext.Provider>
               </NotSubmittedContext.Provider>
+              </LoadingContext.Provider>
+              </SubmitErrorContext.Provider>
               </MantineProvider>
           </div>
       </Router>

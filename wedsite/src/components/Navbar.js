@@ -14,10 +14,6 @@ function isMob() {
     return width < 1000;
 }
 
-// TODO: fire website in background and reattach - DONE
-// TODO: client logging - DONE
-// TODO: faqs black text - DONE
-// TODO: fail fetch silently - DONE
 // TODO: make form depend on result
 // TODO: add food to form, check that it does the email properly
 // TODO: flag to control whether rsvp shows up

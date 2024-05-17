@@ -1,11 +1,13 @@
 import React, {useContext, useState} from 'react';
-import {NotSubmittedContext, UserNameContext} from '../App';
+import {LoadingContext, NotSubmittedContext, ReturnMessageContext, SubmitErrorContext, UserNameContext} from '../App';
 
 
 const FormExample = () => {
 
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
-    const [userName, setUserName] = useContext(UserNameContext);
+    const [loading, setLoading] = useContext(LoadingContext);
+    const [message, setMessage] = useContext(ReturnMessageContext);
+    const [submitError, setSubmitError] = useContext(SubmitErrorContext);
 
     const [formData, setFormData] = useState({
         fullName: '',
@@ -74,17 +76,17 @@ const FormExample = () => {
     // Event handler for form submission
     const handleSubmit = (event) => {
         event.preventDefault();
+        setLoading(true)
         // You can perform form validation or submit data here
         formData.additionalRSVP = additionalFormData;
         setNotSubmitted(false)
 
-        setUserName(formData.fullName.split(" ")[0])
-
+        let username = (formData.fullName.split(" ")[0])
+        let msg = ""
 
         const endpoint = process.env.REACT_APP_RSVP_ENDPOINT
         fetch(endpoint, {
             method: 'POST',
-            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -94,15 +96,29 @@ const FormExample = () => {
             .then(response => {
                 if (!response.ok) {
                     console.log('response received:', response);
+                    msg = "Apologies " + username + ", there was a bad response when submitting your details"
+                    console.log(msg);
+                    setLoading(false)
+                    setSubmitError(true)
+                    setMessage(msg.toString())
+                    console.log(message);
                     throw new Error('Network response was not ok ');
                 }
                 return response.json();
             })
             .then(data => {
                 console.log('Data received:', data);
+                msg = "Thanks for submitting the rsvp, " + username + "!"
+                setMessage(msg.toString())
+                setLoading(false)
+                setSubmitError(false)
             })
             .catch(error => {
                 console.error('There was a problem with your fetch operation:', error);
+                msg = "Apologies " + username + ", there was an error when submitting your details"
+                setMessage(msg.toString())
+                setLoading(false)
+                setSubmitError(true)
             });
     };
 
