@@ -14,9 +14,6 @@ function isMob() {
     return width < 1000;
 }
 
-// TODO: make form depend on result
-// TODO: add food to form, check that it does the email properly
-// TODO: flag to control whether rsvp shows up
 // TODO: email logs to me every 24 hours
 // TODO: raf colours rgb(180,199,231) text to black
 
