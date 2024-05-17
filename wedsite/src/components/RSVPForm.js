@@ -168,14 +168,12 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="starter" value="starter1" id="starter1"
+                                        <input type="radio" name="starter" value="Gyozas" id="starter1"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="starter1">Lots and lots and lots and lots and lots and lots
-                                        of tinnies</label>
-                                        <input type="radio" name="starter" value="starter2" id="starter2"
+                                        <label htmlFor="starter1">Gyozas</label>
+                                        <input type="radio" name="starter" value="Bruschetta" id="starter2"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="starter2">more and more and more and more and more and more
-                                        of cans</label>
+                                        <label htmlFor="starter2">Bruschetta</label>
                                     </div>
                                 </div>
                             </div>
@@ -186,12 +184,12 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="main" value="main1" id="main1"
+                                        <input type="radio" name="main" value="Vegetable Tikka Masala with All the Trimmings" id="main1"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="main1">main 1</label>
-                                        <input type="radio" name="main" value="main2" id="main2"
+                                        <label htmlFor="main1">Vegetable Tikka Masala with All the Trimmings</label>
+                                        <input type="radio" name="main" value="Lasagne with Garlic Bread, Salad and Coleslaw" id="main2"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="main2">main 2</label>
+                                        <label htmlFor="main2">Lasagne with Garlic Bread, Salad and Coleslaw</label>
                                     </div>
                                 </div>
                             </div>
@@ -202,12 +200,12 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="dessert" value="dessert1" id="dessert1"
+                                        <input type="radio" name="dessert" value="White Chocolate and Raspberry Brioche and Butter Pudding" id="dessert1"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="dessert1">dessert 1</label>
-                                        <input type="radio" name="dessert" value="dessert2" id="dessert2"
+                                        <label htmlFor="dessert1">White Chocolate and Raspberry Brioche and Butter Pudding</label>
+                                        <input type="radio" name="dessert" value="Tiramisu" id="dessert2"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="dessert2">dessert 2</label>
+                                        <label htmlFor="dessert2">Tiramisu</label>
                                     </div>
                                 </div>
                             </div>
