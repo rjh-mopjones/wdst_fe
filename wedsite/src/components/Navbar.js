@@ -14,6 +14,15 @@ function isMob() {
     return width < 1000;
 }
 
+// TODO: fire website in background and reattach - DONE
+// TODO: client logging - DONE
+// TODO: faqs black text - DONE
+// TODO: fail fetch silently - DONE
+// TODO: make form depend on result
+// TODO: add food to form, check that it does the email properly
+// TODO: flag to control whether rsvp shows up
+// TODO: email logs to me every 24 hours
+// TODO: raf colours rgb(180,199,231) text to black
 
 function getMopOrRory(){
     if (window.location.href.toLowerCase().includes("mop")){
@@ -75,6 +84,7 @@ const routeMap= new Map([
 const Navbar = () => {
     const [burgerOpened, { toggle }] = useDisclosure();
     const [isVisible, setIsVisible] = useState(true);
+    const [clientData, setClientData] = useState("");
     const [mopOrRory, setMopOrRory] = useState("Rory");
     const [height, setHeight] = useState(0)
     const [stateMobile, setMobileState] = useState(isMob);
@@ -89,7 +99,20 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        logToServer("location from navbar component, "+ window.location.href)
+
+        if (clientData === ""){
+            fetch( process.env.REACT_APP_CLIENT_FETCH_ENDPOINT).then((response) => response.json())
+                .then((data) => {
+                    setClientData(JSON.stringify(data));
+                    return data
+                })
+                .then((data) => {
+                    logToServer(window.location.href + " pulled client: " + JSON.stringify(data))
+                }).catch((error) => console.log("client pull failed "))
+        } else{
+            logToServer(window.location.href + " client: "  + clientData)
+        }
+
         setPageName(getWindowName)
         window.addEventListener("resize", () => {
             setMobileState(isMob)

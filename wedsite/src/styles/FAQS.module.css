@@ -24,8 +24,8 @@
         background-color: white;
     }
 }
-/*.control:hover{*/
-/*    border: 1px transparent;*/
-/*    color: black;*/
-/*    font-size: xx-large;*/
-/*}*/
+.control:hover{
+    border: 1px transparent;
+    color: black;
+    font-size: xx-large;
+}
