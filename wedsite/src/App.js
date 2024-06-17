@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Directions from './pages/Directions';
@@ -19,6 +19,8 @@ import '@mantine/core/styles/Accordion.css';
 import FAQs from "./pages/FAQs";
 import {MantineProvider, createTheme} from "@mantine/core"; // Import your CSS file
 
+
+export const DarkModeContext= React.createContext(["light"])
 
 export const NotSubmittedContext = React.createContext({
     notSubmitted:true
@@ -60,6 +62,7 @@ const App = () => {
     const [submitError, setSubmitError] = useState(SubmitErrorContext);
     const [loading, setLoading] = useState(LoadingContext);
     const [message, setMessage] = useState(ReturnMessageContext);
+    const [darkMode, setDarkMode] = useContext(DarkModeContext);
     return (
       <Router>
           <div className={"page"}>
@@ -67,6 +70,7 @@ const App = () => {
               <SubmitErrorContext.Provider value={[submitError, setSubmitError]}>
               <LoadingContext.Provider value={[loading, setLoading]}>
               <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
+              <DarkModeContext.Provider value={[darkMode, setDarkMode]} >
               <ReturnMessageContext.Provider value={[message, setMessage]}>
                   <Navbar/>
                   <div className="content">
@@ -81,6 +85,7 @@ const App = () => {
                       </Routes>
                   </div>
               </ReturnMessageContext.Provider>
+              </DarkModeContext.Provider>
               </NotSubmittedContext.Provider>
               </LoadingContext.Provider>
               </SubmitErrorContext.Provider>

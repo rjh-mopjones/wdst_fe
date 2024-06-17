@@ -1,6 +1,6 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import RSVPForm from "../components/RSVPForm";
-import {LoadingContext, NotSubmittedContext, ReturnMessageContext, SubmitErrorContext, UserNameContext} from '../App';
+import {LoadingContext, NotSubmittedContext, ReturnMessageContext} from '../App';
 import {ClipLoader} from "react-spinners";
 
 const RSVP = () => {

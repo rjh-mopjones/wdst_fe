@@ -1,12 +1,13 @@
 // Navbar.js
 
-import React, {useRef} from 'react';
+import React, {useContext, useRef} from 'react';
 import {Burger, Drawer} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import burgClasses from '../styles/Burg.module.css';
 import drawClasses from '../styles/Draw.module.css';
 import {NavLink, useNavigate} from "react-router-dom";
 import logToServer from '../logging/logging'
+import {DarkModeContext} from "../App";
 const { useState, useEffect } = React;
 
 function isMob() {
@@ -14,9 +15,10 @@ function isMob() {
     return width < 1000;
 }
 
-// TODO: email logs to me every 24 hours
 // TODO: raf colours rgb(180,199,231) text to black
-
+// TODO: Rsvp form keeps deleting content when you switch off it
+// TODO: create scripts for bringing website down, updating website
+// TODO: make scripts for turning rsvp off and on
 function getMopOrRory(){
     if (window.location.href.toLowerCase().includes("mop")){
         document.title = 'Mop and Ellie';
@@ -82,7 +84,9 @@ const Navbar = () => {
     const [height, setHeight] = useState(0)
     const [stateMobile, setMobileState] = useState(isMob);
     const [pageName, setPageName] = useState(getWindowName);
+    const [darkMode, setDarkMode] = useContext(DarkModeContext);
     const routerNavigate = useNavigate();
+
 
     const handleKeyDown = (event) => {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight'){
@@ -92,6 +96,7 @@ const Navbar = () => {
     };
 
     useEffect(() => {
+        console.log(darkMode)
 
         if (clientData === ""){
             fetch( process.env.REACT_APP_CLIENT_FETCH_ENDPOINT).then((response) => response.json())
@@ -147,7 +152,7 @@ const Navbar = () => {
             {
                 isVisible
                 &&
-                    <div className={ stateMobile ? 'topBar-mob' : "topBar"}>
+                    <div className={ stateMobile ? 'topBar-mob' : "topBar"} data-theme={darkMode}>
                         <div>
                             <ul className={stateMobile ? 'header-mob' : 'header'}>
                                 <li className={stateMobile ? "navbar-li-mob" : 'header'}>21st June 2025</li>
