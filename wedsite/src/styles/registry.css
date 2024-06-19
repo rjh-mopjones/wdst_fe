@@ -1,4 +1,23 @@
 .registry-placeholder{
-    padding-bottom: 5%;
-    text-align: center;
+    text-align: left;
+}
+.registry-wrap-mob{
+
+    /*background-color: #872932;*/
+    border-radius: 5px;
+    padding: 2% 3%;
+}
+
+button[type=registry] {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-fg);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    scale: 1.25;
+}
+button[type=registry]:hover {
+    color: black;
+    background-color: #EC3F13;
 }

@@ -3,11 +3,11 @@
     border: 1px transparent;
 }
 .item{
-    color: black;
+    color: var(--color-button-fg);
     border: 1px transparent;
     font-size: xx-large;
     text-align: left;
-    background-color: #E7B268;
+    background-color: var(--color-faq);
     border-radius: 10px;
     margin-bottom: 20px;
     margin-left: 5%;
@@ -16,7 +16,7 @@
 .control{
     border: 1px transparent;
     border-radius: 10px;
-    background-color: #872932;
+    background-color: var(--color-modal-bg);
     color: white;
     font-size: xx-large;
     &[data-active] {

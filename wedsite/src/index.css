@@ -1,10 +1,37 @@
+body[data-theme="dark"] {
+  --color-bg:#62254d;
+  --color-fg: white;
+  --color-button-bg: #FDCB1E;
+  --color-button-fg: black;
+  --color-button-hover: white;
+  --color-button-hover-text: black;
+  --color-modal-bg: #872932;
+  --color-modal-bg2: #872932;
+  --color-faq:  #E7B268;
+  --color-modal-button: #FDCB1E
+}
+
+body[data-theme="light"] {
+  --color-bg: #b4c7e7;
+  --color-fg: #000000;
+  --color-button-bg: black;
+  --color-button-fg: white;
+  --color-button-hover: white;
+  --color-button-hover-text: black;
+  --color-modal-bg: black;
+  --color-modal-bg2: #594B6F;
+  --color-faq:  #594B6F;
+  --color-modal-button: #594B6F
+}
+
 body {
+  data-theme:"dark";
   margin: 0;
+  font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg);
 }
 
 code {

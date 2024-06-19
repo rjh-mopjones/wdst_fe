@@ -20,7 +20,7 @@ import FAQs from "./pages/FAQs";
 import {MantineProvider, createTheme} from "@mantine/core"; // Import your CSS file
 
 
-export const DarkModeContext= React.createContext(["light"])
+export const DarkModeContext= React.createContext(["dark"] );
 
 export const NotSubmittedContext = React.createContext({
     notSubmitted:true
@@ -62,7 +62,7 @@ const App = () => {
     const [submitError, setSubmitError] = useState(SubmitErrorContext);
     const [loading, setLoading] = useState(LoadingContext);
     const [message, setMessage] = useState(ReturnMessageContext);
-    const [darkMode, setDarkMode] = useContext(DarkModeContext);
+    const [darkMode, setDarkMode] = useState(DarkModeContext);
     return (
       <Router>
           <div className={"page"}>
@@ -70,8 +70,8 @@ const App = () => {
               <SubmitErrorContext.Provider value={[submitError, setSubmitError]}>
               <LoadingContext.Provider value={[loading, setLoading]}>
               <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
-              <DarkModeContext.Provider value={[darkMode, setDarkMode]} >
               <ReturnMessageContext.Provider value={[message, setMessage]}>
+              <DarkModeContext.Provider value={[darkMode, setDarkMode]} >
                   <Navbar/>
                   <div className="content">
                       <Routes>
@@ -84,8 +84,8 @@ const App = () => {
                           <Route path="/rsvp" element={<RSVP/>} />
                       </Routes>
                   </div>
-              </ReturnMessageContext.Provider>
               </DarkModeContext.Provider>
+              </ReturnMessageContext.Provider>
               </NotSubmittedContext.Provider>
               </LoadingContext.Provider>
               </SubmitErrorContext.Provider>

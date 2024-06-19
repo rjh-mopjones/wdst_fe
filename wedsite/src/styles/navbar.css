@@ -25,7 +25,7 @@
 
 .mob-navlink{
     text-decoration: none;
-    color: white;
+    color: var(--color-fg);
 }
 .mob-menu-class {
     padding: 0;
@@ -55,14 +55,14 @@
     z-index: 2;
 }
 
-#mob-menuToggle span
+#mob-menutoggle span
 {
     display: flex;
     width: 29px;
     height: 2px;
     margin-bottom: 5px;
     position: relative;
-    background: #ffffff;
+    background:  var(--color-fg);
     border-radius: 3px;
     z-index: 1;
     transform-origin: 5px 0px;
@@ -106,7 +106,7 @@
     box-shadow: 0 0 10px #85888C;
     margin: -175px 0 0 -50px;
     padding-top: 220px;
-    background-color: #872932;
+    background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     padding-left: 50px;
     transform-origin: 0% 0%;
@@ -118,7 +118,7 @@
 #mob-menu li
 {
     padding: 10px 0;
-    color: white;
+    color: var(--color-fg);
     transition-delay: 2s;
 }
 
@@ -128,17 +128,17 @@
 }
 
 .mantine-Drawer-content	{
-    background: #62254D;
+    background: var(--color-bg);
 }
 
 .mantine-Drawer-root{
-    background: #62254D;
+    background: var(--color-bg);
 }
 .mantine-Drawer-header{
-    background: #62254D;
+    background: var(--color-bg);
 }
 .mob-burger-bar{
-    background: #62254D;
+    background: var(--color-bg);
     position: static;
     padding-bottom: 3%;
     padding-top: 2%;
@@ -168,8 +168,12 @@
     z-index: 0;
 }
 
+.topBar {
+    background: var(--color-bg);
+}
+
 .topBar-mob {
-    background: #62254D;
+    background: var(--color-bg);
 }
 
 .header-mob {
@@ -190,7 +194,7 @@
 
 .title-mob {
     text-align: center;
-    color: white;
+    background: var(--color-bg);
     padding-bottom: 10px;
     font-size: 40px;
     font-family: "Apple LiSung", serif;

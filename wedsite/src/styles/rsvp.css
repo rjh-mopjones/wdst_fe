@@ -4,7 +4,8 @@
 
 .rsvp-form-container {
     border-radius: 20px;
-    background-color: #872932;
+    background-color: var(--color-modal-bg);
+    color: white;
     padding: 10px;
     position: static;
     margin-left: auto;
@@ -96,8 +97,8 @@ label {
 }
 
 button[type=submit] {
-    background-color: #FDCB1E;
-    color: black;
+    background-color: var(--color-modal-button);
+    color: var(--color-button-fg);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -105,8 +106,8 @@ button[type=submit] {
 }
 
 .rsvp-add-person-button {
-    background-color: #FDCB1E;
-    color: black;
+    background-color: var(--color-modal-button);
+    color: var(--color-button-fg);
     padding: 12px 20px 12px 20px;
     border: none;
     border-radius: 4px;
@@ -114,8 +115,8 @@ button[type=submit] {
 }
 
 .rsvp-button {
-    background-color: #FDCB1E;
-    color: black;
+    background-color: var(--color-faq);
+    color: var(--color-button-fg);
     padding: 12px 20px 12px 20px;
     border: none;
     border-radius: 4px;
@@ -128,11 +129,11 @@ button[type=submit] {
 .rsvp-delete-person-button{
     float :right;
     width: 50px;
-    background-color: #872932;
+    background-color: var(--color-modal-bg);
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    color: white;
+    color: var(--color-button-hover);
     cursor: pointer;
     margin-right: 5%;
     margin-bottom: 5%;
@@ -141,8 +142,7 @@ button[type=submit] {
 
 .rsvp-delete-person-button:hover{
     background-color: white;
-    color: white;
-    color: #872932;
+    color: black;
 }
 
 

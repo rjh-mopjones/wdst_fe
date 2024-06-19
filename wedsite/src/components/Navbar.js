@@ -76,6 +76,7 @@ const routeMap= new Map([
     ])],
 ]);
 
+
 const Navbar = () => {
     const [burgerOpened, { toggle }] = useDisclosure();
     const [isVisible, setIsVisible] = useState(true);
@@ -87,8 +88,16 @@ const Navbar = () => {
     const [darkMode, setDarkMode] = useContext(DarkModeContext);
     const routerNavigate = useNavigate();
 
-
     const handleKeyDown = (event) => {
+        if (event.code === 'KeyJ' && (event.ctrlKey || event.metaKey)) {
+            if (document.body.getAttribute('data-theme') === 'dark'){
+                setDarkMode(false)
+                document.body.setAttribute('data-theme', 'light');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                setDarkMode(true)
+            }
+        }
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight'){
             routerNavigate(routeMap.get(getPath()).get(event.key))
         }
@@ -96,8 +105,7 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        console.log(darkMode)
-
+        console.log(darkMode._currentValue[0])
         if (clientData === ""){
             fetch( process.env.REACT_APP_CLIENT_FETCH_ENDPOINT).then((response) => response.json())
                 .then((data) => {
@@ -143,8 +151,9 @@ const Navbar = () => {
 
     const activeState = ({ isActive }) => {
         return {
-            backgroundColor: isActive ? "#995D6A" : "",
-            borderBottom: isActive ? "3px solid #62254D" : ""
+            backgroundColor: isActive ? " var(--color-fg)" : "",
+            color: isActive ? " var(--color-bg)" : "",
+            borderBottom: isActive ? "3px solid var(--color-fg)" : ""
         };
     };
     return (
@@ -152,7 +161,7 @@ const Navbar = () => {
             {
                 isVisible
                 &&
-                    <div className={ stateMobile ? 'topBar-mob' : "topBar"} data-theme={darkMode}>
+                    <div className={ stateMobile ? 'topBar-mob' : "topBar"}>
                         <div>
                             <ul className={stateMobile ? 'header-mob' : 'header'}>
                                 <li className={stateMobile ? "navbar-li-mob" : 'header'}>21st June 2025</li>
