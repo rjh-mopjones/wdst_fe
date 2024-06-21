@@ -8,20 +8,26 @@ body[data-theme="dark"] {
   --color-modal-bg: #872932;
   --color-modal-bg2: #872932;
   --color-faq:  #E7B268;
-  --color-modal-button: #FDCB1E
+  --color-modal-button: #FDCB1E;
+  --color-border:transparent;
+  --color-item: #eaa2c0;
+  --color-toggle: white;
 }
 
 body[data-theme="light"] {
   --color-bg: #b4c7e7;
   --color-fg: #000000;
-  --color-button-bg: black;
+  --color-button-bg: #b4c7e7;
   --color-button-fg: white;
   --color-button-hover: white;
   --color-button-hover-text: black;
-  --color-modal-bg: black;
+  --color-modal-bg: #b4c7e7;
   --color-modal-bg2: #594B6F;
   --color-faq:  #594B6F;
-  --color-modal-button: #594B6F
+  --color-modal-button: #594B6F;
+  --color-border:black;
+  --color-item: #b4c7e7;
+  --color-toggle: #b4c7e7;
 }
 
 body {

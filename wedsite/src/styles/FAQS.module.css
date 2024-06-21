@@ -3,11 +3,12 @@
     border: 1px transparent;
 }
 .item{
-    color: var(--color-button-fg);
+    color: black;
     border: 1px transparent;
+    outline: 2px solid var(--color-border);
     font-size: xx-large;
     text-align: left;
-    background-color: var(--color-faq);
+    background-color: var(--color-item);
     border-radius: 10px;
     margin-bottom: 20px;
     margin-left: 5%;
@@ -15,9 +16,10 @@
 }
 .control{
     border: 1px transparent;
+    outline: 2px solid var(--color-border);
     border-radius: 10px;
     background-color: var(--color-modal-bg);
-    color: white;
+    color: var(--color-fg);
     font-size: xx-large;
     &[data-active] {
         color: black;

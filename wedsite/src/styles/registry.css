@@ -10,9 +10,9 @@
 
 button[type=registry] {
     background-color: var(--color-button-bg);
-    color: var(--color-button-fg);
+    color: black;
     padding: 12px 20px;
-    border: none;
+    border: 1px solid var(--color-border);
     border-radius: 4px;
     cursor: pointer;
     scale: 1.25;
