@@ -15,10 +15,10 @@ function isMob() {
     return width < 1000;
 }
 
-// TODO: raf colours rgb(180,199,231) text to black
-// TODO: Rsvp form keeps deleting content when you switch off it
+// TODO: turn off dev server in prod
 // TODO: create scripts for bringing website down, updating website
-// TODO: make scripts for turning rsvp off and on
+// TODO: Rsvp form keeps deleting content when you switch off it
+// TODO: switch to light mode on mobile
 function getMopOrRory(){
     if (window.location.href.toLowerCase().includes("mop")){
         document.title = 'Mop and Ellie';

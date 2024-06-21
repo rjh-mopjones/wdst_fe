@@ -7,8 +7,7 @@ const RSVP = () => {
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
     const [loading, setLoading] = useContext(LoadingContext);
     const [message, setMessage] = useContext(ReturnMessageContext);
-    const enableRSVP = true
-
+    const enableRSVP = process.env.REACT_APP_RSVP_ENABLED
     useEffect(() => {
 
         return () => {};
@@ -55,7 +54,11 @@ const RSVP = () => {
                         <br/>
                         <br/>
                         <br/>
-                        <h2>RSVP not open at the moment</h2>
+                        <h2>Apologies - RSVP not enabled</h2>
+                        <br/>
+                        <br/>
+                        <h2>We are sending out invites soon!</h2>
+                        <br/>
                         <br/>
                     </div>
                 </div>
