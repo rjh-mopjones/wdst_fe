@@ -39,9 +39,7 @@ const Directions = () => {
                         <br/>
                         <h2>How to get there from London</h2>
                         <br/>
-                        <p>Quickest way is to get a train to Newport, then get a train to Abergavenny (30 min taxi) or
-                            get a
-                            train to Brecon (15 min taxi)</p>
+                        <p>Quickest way is to get a train to Newport, then get a train to Abergavenny (30 min taxi) </p>
                         <br/>
                         <br/>
                         <h2>Driving</h2>

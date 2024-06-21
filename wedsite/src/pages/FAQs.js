@@ -22,7 +22,7 @@ const FAQs= () => {
                 </Accordion.Item>
                 <Accordion.Item value="item-4">
                     <AccordionControl>What time should we arrive?</AccordionControl>
-                    <Accordion.Panel>Latest 12:00pm 21st June 2025</Accordion.Panel>
+                    <Accordion.Panel>Latest 12:30pm 21st June 2025, Ceremony starts at 1pm</Accordion.Panel>
                 </Accordion.Item>
                 <Accordion.Item value="item-5">
                     <AccordionControl>Is the ceremony and reception in the same place?</AccordionControl>
@@ -30,11 +30,11 @@ const FAQs= () => {
                 </Accordion.Item>
                 <Accordion.Item value="item-6">
                     <AccordionControl>Is the menu completely vegetarian?</AccordionControl>
-                    <Accordion.Panel>Yes, We are both vegetarian so we have a vegetarian menu</Accordion.Panel>
+                    <Accordion.Panel>Yes, we are both vegetarian so we have a vegetarian menu</Accordion.Panel>
                 </Accordion.Item>
                 <Accordion.Item value="item-7">
                     <AccordionControl>Is there a strict dress code?</AccordionControl>
-                    <Accordion.Panel>Just normal wedding smart attire</Accordion.Panel>
+                    <Accordion.Panel>Just normal wedding smart attire, Most of the day will be outside on grass so wear stilettos are your own risk</Accordion.Panel>
                 </Accordion.Item>
                 <Accordion.Item value="item-8">
                     <AccordionControl>Are there plus 1s?</AccordionControl>

@@ -16,6 +16,8 @@ function isMob() {
 }
 
 // TODO: turn off dev server in prod
+// TODO: Add india pics back into front page
+// TODO: Add a pic to rsvp if there is one of the blank background ones left
 // TODO: create scripts for bringing website down, updating website
 // TODO: Rsvp form keeps deleting content when you switch off it
 // TODO: switch to light mode on mobile

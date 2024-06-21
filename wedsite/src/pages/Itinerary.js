@@ -31,7 +31,7 @@ const Itinerary = () => {
                     <div className={"itinerary-text-mob"}>
                         <br/>
                         <h2>
-                            For the time being, plan to get to Treberfydd House for 12:30pm 21st June 2025!
+                            For the time being, plan to get to Treberfydd House for 12:30pm 21st June 2025, ceremony is planned for 1pm!
                         </h2>
                     </div>
             </div>
@@ -47,7 +47,7 @@ const Itinerary = () => {
                     <br/>
                     <br/>
                     <h2>
-                        For the time being, plan to get to Treberfydd House for 12:30pm 21st June 2025!
+                        For the time being, plan to get to Treberfydd House for 12:30pm 21st June 2025, ceremony is planned for 1pm!
                     </h2>
                 </div>
             </div>
