@@ -7,7 +7,7 @@ const RSVP = () => {
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
     const [loading, setLoading] = useContext(LoadingContext);
     const [message, setMessage] = useContext(ReturnMessageContext);
-    const enableRSVP = process.env.REACT_APP_RSVP_ENABLED
+    const enableRSVP = process.env.REACT_APP_RSVP_ENABLED.toLowerCase() === 'true'
     useEffect(() => {
 
         return () => {};
