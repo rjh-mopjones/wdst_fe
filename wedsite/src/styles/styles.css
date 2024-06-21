@@ -226,11 +226,11 @@ html, body {
 }
 .itinerary-text{
     color: var(--color-fg);
-    margin-top: 10%
+    margin-top: 7%;
+    padding:2%;
 }
 
 .itinerary {
-    padding-top: 5%; /* Adjust the padding to create space below the navbar */
     overflow: hidden;
     padding-bottom: 5%;
 }
