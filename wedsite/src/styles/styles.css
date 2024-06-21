@@ -12,8 +12,13 @@ nav {
     justify-content: space-around;
     font-family: "apple lisung";
     font-size: large
-
 }
+
+iframe
+{
+    display: none;
+}
+
 .navbar-li {
     margin: 0;
 }
