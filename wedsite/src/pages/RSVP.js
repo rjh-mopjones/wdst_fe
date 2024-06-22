@@ -1,14 +1,23 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import RSVPForm from "../components/RSVPForm";
 import {LoadingContext, NotSubmittedContext, ReturnMessageContext} from '../App';
 import {ClipLoader} from "react-spinners";
+
+function isMob() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return width < 1000;
+}
 
 const RSVP = () => {
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
     const [loading, setLoading] = useContext(LoadingContext);
     const [message, setMessage] = useContext(ReturnMessageContext);
+    const [stateMobile, setMobileState] = useState(isMob);
     const enableRSVP = process.env.REACT_APP_RSVP_ENABLED.toLowerCase() === 'true'
     useEffect(() => {
+        window.addEventListener("resize", () => {
+            setMobileState(isMob)
+        });
 
         return () => {};
 
@@ -21,10 +30,17 @@ const RSVP = () => {
 
     return (
         <div className={"rsvp-placeholder"}>
-            <img className={"rsvp-photo"} src={require('../static/cuddles.png')}/>
+            {stateMobile ?
+                <div></div>
+                :
+                <div>
+                    <img className={"rsvp-photo"} src={require('../static/cuddles.png')}/>
+                </div>
+
+            }
             {enableRSVP ?
                 <div className={"rsvp-form-div"}>
-                    {notSubmitted && (
+                {notSubmitted && (
                         <RSVPForm/>
                     )}
                     {!notSubmitted && (loading ?
