@@ -28,11 +28,12 @@ const Home = () => {
                 <div>
                     <img className={"homePhoto"} src={require('../static/home-photo-sm.png')}/>
                     <img className={"navbar-photo"} src={require('../static/mobile/std-web-3.png')}/>
+                    <img className={"homePhoto"} src={require('../static/home-photo2.png')}/>
                 </div>
             }
             {
-            stateMobile &&
-            <img className={"home-photo-mob-2"} src={require('../static/mobile/home-mob-2-sat.png')}/>
+                stateMobile &&
+                <img className={"home-photo-mob-2"} src={require('../static/mobile/home-mob-2-sat.png')}/>
             }
 </div>
 )

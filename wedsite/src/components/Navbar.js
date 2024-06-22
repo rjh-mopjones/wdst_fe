@@ -15,10 +15,7 @@ function isMob() {
     return width < 1000;
 }
 
-// TODO: Add india pics back into front page
-// TODO: Add a pic to rsvp if there is one of the blank background ones left
-// TODO: create scripts for bringing website down, updating website
-// TODO: Rsvp form keeps deleting content when you switch off it
+// TODO: scripts to interact with DB
 // TODO: switch to light mode on mobile
 function getMopOrRory(){
     if (window.location.href.toLowerCase().includes("mop")){

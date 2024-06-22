@@ -43,6 +43,13 @@
     cursor: pointer;
 }
 
+.rsvp-photo {
+    width: 20%;
+    float: left;
+    position: relative;
+    z-index: -1;
+}
+
 .rsvp-submit-again-button:hover {
     background-color: #EC3F13;
     color: white;
