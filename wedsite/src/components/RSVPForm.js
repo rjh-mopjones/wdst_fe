@@ -1,5 +1,12 @@
 import React, {useContext, useState} from 'react';
-import {LoadingContext, NotSubmittedContext, ReturnMessageContext, SubmitErrorContext, UserNameContext} from '../App';
+import {
+    FormContext,
+    LoadingContext,
+    NotSubmittedContext,
+    ReturnMessageContext,
+    SubmitErrorContext,
+    UserNameContext
+} from '../App';
 
 
 const FormExample = () => {
@@ -8,19 +15,7 @@ const FormExample = () => {
     const [loading, setLoading] = useContext(LoadingContext);
     const [message, setMessage] = useContext(ReturnMessageContext);
     const [submitError, setSubmitError] = useContext(SubmitErrorContext);
-
-    const [formData, setFormData] = useState({
-        fullName: '',
-        email: '',
-        starter: '',
-        main: '',
-        dessert: '',
-        song: '',
-        message: '',
-        diet: '',
-        attendance: false,
-    });
-
+    const [formData, setFormData] = useContext(FormContext);
     const [additionalFormData, setAdditionalFormData] = useState([]);
 
     // Event handler for input changes
@@ -151,9 +146,9 @@ const FormExample = () => {
                         </div>
                         <div className="rsvp-col-75">
                             <div className="rsvp-radio-buttons">
-                                <input type="radio" id="yes" name="attendance" value='true' onChange={handleInputChange}/>
+                                <input type="radio" id="yes" name="attendance" value='true' checked={formData.attendance} onChange={handleInputChange}/>
                                     <label htmlFor="yes" className="rsvp-radio-label">Yes</label>
-                                <input type="radio" id="no" name="attendance" value='false' onChange={handleInputChange}/>
+                                <input type="radio" id="no" name="attendance" value='false' checked={!formData.attendance} onChange={handleInputChange}/>
                                     <label htmlFor="no" className="rsvp-radio-label">No</label>
                                 <br/>
                             </div>

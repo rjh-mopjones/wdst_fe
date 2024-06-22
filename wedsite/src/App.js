@@ -38,6 +38,19 @@ export const SubmitErrorContext= React.createContext({
     error:false
 });
 
+export const FormContext = React.createContext({
+    fullName: '',
+    email: '',
+    starter: '',
+    main: '',
+    dessert: '',
+    song: '',
+    message: '',
+    diet: '',
+    attendance: false,
+});
+
+
 const myColor = [
     '#d30690',
     '#eedfe9',
@@ -63,10 +76,12 @@ const App = () => {
     const [loading, setLoading] = useState(LoadingContext);
     const [message, setMessage] = useState(ReturnMessageContext);
     const [darkMode, setDarkMode] = useState(DarkModeContext);
+    const [formData, setFormData] = useState(FormContext);
     return (
       <Router>
           <div className={"page"}>
               <MantineProvider theme={theme}>
+              <FormContext.Provider value={[formData, setFormData]}>
               <SubmitErrorContext.Provider value={[submitError, setSubmitError]}>
               <LoadingContext.Provider value={[loading, setLoading]}>
               <NotSubmittedContext.Provider value={[notSubmitted, setNotSubmitted]}>
@@ -89,6 +104,7 @@ const App = () => {
               </NotSubmittedContext.Provider>
               </LoadingContext.Provider>
               </SubmitErrorContext.Provider>
+              </FormContext.Provider>
               </MantineProvider>
           </div>
       </Router>
