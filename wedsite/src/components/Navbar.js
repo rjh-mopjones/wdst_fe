@@ -222,15 +222,21 @@ const Navbar = () => {
                                                                                 onClick={handleRouting}
                                                                                 id="RSVP">RSVP</NavLink>
                                 </li>
+                                <br/>
+                                <br/>
                                 <li className={"drawer-mob-navbar-li"}>
-                                    <ActionIcon
+                                    <div className={"dark-mode-button-div"}>
+                                    <ActionIcon className={"dark-mode-button"}
                                         variant="outline"
-                                        color={darkMode? 'white' : 'black'}
+                                        color={darkMode ? 'white' : 'black'}
                                         onClick={() => toggleDarkMode()}
+                                                size={"xl"}
                                         title="Toggle color scheme"
+
                                     >
-                                        {darkMode ? <IconSun size="large" /> : <IconMoonStars size="5.0rem" />}
+                                        {darkMode ? <IconSun size="large"/> : <IconMoonStars size="5.0rem"/>}
                                     </ActionIcon>
+                                    </div>
                                 </li>
                             </ul>
 
