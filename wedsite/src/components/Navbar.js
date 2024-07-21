@@ -98,7 +98,6 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        console.log(darkMode._currentValue[0])
         if (clientData === ""){
             fetch( process.env.REACT_APP_CLIENT_FETCH_ENDPOINT).then((response) => response.json())
                 .then((data) => {

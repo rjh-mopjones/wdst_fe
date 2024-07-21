@@ -1,15 +1,10 @@
 import React, {useContext, useState} from 'react';
-import {
-    FormContext,
-    LoadingContext,
-    NotSubmittedContext,
-    ReturnMessageContext,
-    SubmitErrorContext,
-    UserNameContext
-} from '../App';
+import {FormContext, LoadingContext, NotSubmittedContext, ReturnMessageContext, SubmitErrorContext} from '../App';
 
 
 const FormExample = () => {
+
+
 
     const GYOZAS = "Gyozas"
     const BRUSCHETTA = "Bruschetta"
@@ -75,13 +70,30 @@ const FormExample = () => {
         setAdditionalFormData(data)
     };
 
+    function unpackFormData(formData) {
+        return {
+            fullName: formData.fullName,
+            email: formData.email,
+            starter: formData.starter,
+            main: formData.main,
+            dessert: formData.dessert,
+            song: formData.song,
+            message: formData.message,
+            diet: formData.diet,
+            attendance: formData.attendance,
+        };
+    }
+
     // Event handler for form submission
     const handleSubmit = (event) => {
         event.preventDefault();
         setLoading(true)
         // You can perform form validation or submit data here
-        formData.additionalRSVP = additionalFormData;
+        let unpackedFormData = unpackFormData(formData)
+        unpackedFormData.additionalRSVP = additionalFormData;
         setNotSubmitted(false)
+        console.log(formData)
+
 
         let username = (formData.fullName.split(" ")[0])
         let msg = ""
@@ -92,7 +104,7 @@ const FormExample = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(unpackedFormData)
 
         })
             .then(response => {
@@ -211,7 +223,7 @@ const FormExample = () => {
                                                onChange={handleInputChange}/>
                                         <label htmlFor="dessert1">{BRIOCHE_AND_BUTTER}</label>
                                         <input type="radio" name="dessert" value={TIRAMISU} id="dessert2"
-                                               checked={formData.dessert === BRIOCHE_AND_BUTTER}
+                                               checked={formData.dessert === TIRAMISU}
                                                onChange={handleInputChange}/>
                                         <label htmlFor="dessert2">{TIRAMISU}</label>
                                     </div>
