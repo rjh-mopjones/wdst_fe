@@ -68,6 +68,14 @@
     background-color: var(--color-modal-bg2);
     padding: 1%;
 }
+
+.accommodation-bunkhouse{
+    border: 4px solid transparent;
+    border-radius: 6px;
+    color: white;
+    background-color: var(--color-modal-bg2);
+    padding: 1%;
+}
 .accommodation-entry-outer-mob{
     padding-top: 10%;
     padding-bottom: 2%;

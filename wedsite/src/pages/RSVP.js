@@ -45,7 +45,6 @@ const RSVP = () => {
                     )}
                     {!notSubmitted && (loading ?
                         <div className={"rsvp-loading"}>
-                            <h2>Loading...</h2>
                             <div className={"rsvp-spinner"} style={{
                                 position: "fixed",
                                 top: "50%",

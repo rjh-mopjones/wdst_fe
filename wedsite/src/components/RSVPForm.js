@@ -11,6 +11,13 @@ import {
 
 const FormExample = () => {
 
+    const GYOZAS = "Gyozas"
+    const BRUSCHETTA = "Bruschetta"
+    const TIKKA_MASALA = "Vegetable Tikka Masala with All the Trimmings"
+    const LASAGNE = "Lasagne with Garlic Bread, Salad and Coleslaw"
+    const BRIOCHE_AND_BUTTER = "White Chocolate and Raspberry Brioche and Butter Pudding"
+    const TIRAMISU = "Tiramisu"
+
     const [notSubmitted, setNotSubmitted] = useContext(NotSubmittedContext);
     const [loading, setLoading] = useContext(LoadingContext);
     const [message, setMessage] = useContext(ReturnMessageContext);
@@ -163,12 +170,14 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="starter" value="Gyozas" id="starter1"
+                                        <input type="radio" name="starter" value={GYOZAS}
+                                               checked={formData.starter === GYOZAS} id="starter1"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="starter1">Gyozas</label>
-                                        <input type="radio" name="starter" value="Bruschetta" id="starter2"
+                                        <label htmlFor="starter1">{GYOZAS}</label>
+                                        <input type="radio" name="starter" value={BRUSCHETTA}
+                                               checked={formData.starter === BRUSCHETTA} id="starter2"
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="starter2">Bruschetta</label>
+                                        <label htmlFor="starter2">{BRUSCHETTA}</label>
                                     </div>
                                 </div>
                             </div>
@@ -179,12 +188,14 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="main" value="Vegetable Tikka Masala with All the Trimmings" id="main1"
+                                        <input type="radio" name="main" value={TIKKA_MASALA} id="main1"
+                                               checked={formData.main === TIKKA_MASALA}
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="main1">Vegetable Tikka Masala with All the Trimmings</label>
-                                        <input type="radio" name="main" value="Lasagne with Garlic Bread, Salad and Coleslaw" id="main2"
+                                        <label htmlFor="main1">{TIKKA_MASALA}</label>
+                                        <input type="radio" name="main" value={LASAGNE} id="main2"
+                                               checked={formData.main === LASAGNE}
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="main2">Lasagne with Garlic Bread, Salad and Coleslaw</label>
+                                        <label htmlFor="main2">{LASAGNE}</label>
                                     </div>
                                 </div>
                             </div>
@@ -195,12 +206,14 @@ const FormExample = () => {
                                 </div>
                                 <div className="rsvp-col-75">
                                     <div className="rsvp-starter-toggle">
-                                        <input type="radio" name="dessert" value="White Chocolate and Raspberry Brioche and Butter Pudding" id="dessert1"
+                                        <input type="radio" name="dessert" value={BRIOCHE_AND_BUTTER} id="dessert1"
+                                               checked={formData.dessert === BRIOCHE_AND_BUTTER}
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="dessert1">White Chocolate and Raspberry Brioche and Butter Pudding</label>
-                                        <input type="radio" name="dessert" value="Tiramisu" id="dessert2"
+                                        <label htmlFor="dessert1">{BRIOCHE_AND_BUTTER}</label>
+                                        <input type="radio" name="dessert" value={TIRAMISU} id="dessert2"
+                                               checked={formData.dessert === BRIOCHE_AND_BUTTER}
                                                onChange={handleInputChange}/>
-                                        <label htmlFor="dessert2">Tiramisu</label>
+                                        <label htmlFor="dessert2">{TIRAMISU}</label>
                                     </div>
                                 </div>
                             </div>
