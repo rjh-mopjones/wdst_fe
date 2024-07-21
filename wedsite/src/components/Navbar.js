@@ -1,10 +1,11 @@
 // Navbar.js
 
 import React, {useContext, useRef} from 'react';
-import {Burger, Drawer} from '@mantine/core';
+import {ActionIcon, Burger, Drawer} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import burgClasses from '../styles/Burg.module.css';
 import drawClasses from '../styles/Draw.module.css';
+import { IconSun, IconMoonStars } from '@tabler/icons-react';
 import {NavLink, useNavigate} from "react-router-dom";
 import logToServer from '../logging/logging'
 import {DarkModeContext} from "../App";
@@ -88,13 +89,7 @@ const Navbar = () => {
 
     const handleKeyDown = (event) => {
         if (event.code === 'KeyJ' && (event.ctrlKey || event.metaKey)) {
-            if (document.body.getAttribute('data-theme') === 'dark'){
-                setDarkMode(false)
-                document.body.setAttribute('data-theme', 'light');
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-                setDarkMode(true)
-            }
+            toggleDarkMode()
         }
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight'){
             routerNavigate(routeMap.get(getPath()).get(event.key))
@@ -154,6 +149,17 @@ const Navbar = () => {
             borderBottom: isActive ? "3px solid var(--color-fg)" : ""
         };
     };
+
+    function toggleDarkMode() {
+        if (document.body.getAttribute('data-theme') === 'dark'){
+            setDarkMode(false)
+            document.body.setAttribute('data-theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            setDarkMode(true)
+        }
+    }
+
     return (
         <div className={"divBar"}>
             {
@@ -215,6 +221,16 @@ const Navbar = () => {
                                 <li className={"drawer-mob-navbar-li"}><NavLink className={"mob-navlink"} to='/rsvp'
                                                                                 onClick={handleRouting}
                                                                                 id="RSVP">RSVP</NavLink>
+                                </li>
+                                <li className={"drawer-mob-navbar-li"}>
+                                    <ActionIcon
+                                        variant="outline"
+                                        color={darkMode? 'white' : 'black'}
+                                        onClick={() => toggleDarkMode()}
+                                        title="Toggle color scheme"
+                                    >
+                                        {darkMode ? <IconSun size="large" /> : <IconMoonStars size="5.0rem" />}
+                                    </ActionIcon>
                                 </li>
                             </ul>
 
