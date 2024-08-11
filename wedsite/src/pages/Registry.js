@@ -30,20 +30,14 @@ const Registry = () => {
                 <br/>
                 <h2 className={"registry-placeholder"}>
                     As we live in a relatively small flat in London we already are struggling for room, so we have
-                    opted for a Honeymoon fund Registry.
+                    opted for a Honeymoon fund registry.
                 </h2>
                 <br/>
                 <br/>
                 <h2 className={"registry-placeholder"}>
                     I kindly ask that you keep the items on this registry secret to Ellie as the majority of the items
-                    on there are a surprise!
-                </h2>
-                <br/>
-                <br/>
-                <h2 className={"registry-placeholder"}>
-                    If you wish to get us a physical gift or give money in person, there is an option on the registry
-                    at the bottom of the page, however if you want to do it completely separate don't hesitate to get in
-                    contact.
+                    on there are a surprise! I'm booking the honeymoon so Ellie doesn't know any of the details, not
+                    even the locations.
                 </h2>
                 <br/>
                 <br/>

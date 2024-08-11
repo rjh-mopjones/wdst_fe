@@ -32,18 +32,18 @@ const Accommodation = () => {
                 <h2 className={"accommodation-text-text"}>
                     Bwlch, Llangorse, Talybont, Llangynidr, Llanfrynach, Crickhowell, Talgarth
                 </h2>
-                <br/>
-                <br/>
-                <div className={"accommodation-bunkhouse"}>
-                    <h2 className={"accommodation-text-text"}>
-                        Note that we have also pre-booked a bunkhouse that sleeps 30 people, it is quite cheap at £35
-                        per night.
-                        <br/>
-                        if you are interested in staying at the bunkhouse, please get in contact or mention it in the
-                        additional message part of the RSVP.
-                    </h2>
+                {/*<br/>*/}
+                {/*<br/>*/}
+                {/*<div className={"accommodation-bunkhouse"}>*/}
+                {/*    <h2 className={"accommodation-text-text"}>*/}
+                {/*        Note that we have also pre-booked a bunkhouse that sleeps 30 people, it is quite cheap at £35*/}
+                {/*        per night.*/}
+                {/*        <br/>*/}
+                {/*        if you are interested in staying at the bunkhouse, please get in contact or mention it in the*/}
+                {/*        additional message part of the RSVP.*/}
+                {/*    </h2>*/}
 
-                </div>
+                {/*</div>*/}
             </div>
             <div className={"accommodation-entries"}>
                 <AccommodationEntry entry={"The Bear hotel"}

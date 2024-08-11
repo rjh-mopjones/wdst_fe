@@ -4,11 +4,9 @@ import {FormContext, LoadingContext, NotSubmittedContext, ReturnMessageContext, 
 
 const FormExample = () => {
 
-
-
     const GYOZAS = "Gyozas"
     const BRUSCHETTA = "Bruschetta"
-    const TIKKA_MASALA = "Vegetable Tikka Masala with All the Trimmings"
+    const TIKKA_MASALA = "Vegetable Tikka Masala with all the trimmings"
     const LASAGNE = "Lasagne with Garlic Bread, Salad and Coleslaw"
     const BRIOCHE_AND_BUTTER = "White Chocolate and Raspberry Brioche and Butter Pudding"
     const TIRAMISU = "Tiramisu"
@@ -366,43 +364,40 @@ const FormExample = () => {
                                                                     <div className="rsvp-col-75">
                                                                         <div className="rsvp-starter-toggle">
                                                                             <input type="radio" name={"starter" + index}
-                                                                                   value="starter1"
+                                                                                   value={GYOZAS}
                                                                                    id={"starter1-index-" + index}
                                                                                    data-index={index}
                                                                                    onChange={handleNestedInputChange}/>
-                                                                            <label htmlFor={"starter1-index-" + index}>starter
-                                                                                1</label>
+                                                                            <label htmlFor={"starter1-index-" + index}>{GYOZAS}</label>
                                                                             <input type="radio" name={"starter" + index}
-                                                                                   value="starter2"
+                                                                                   value={BRUSCHETTA}
                                                                                    id={"starter2-index-" + index}
                                                                                    data-index={index}
                                                                                    onChange={handleNestedInputChange}/>
-                                                                            <label htmlFor={"starter2-index-" + index}>starter
-                                                                                2</label>
+                                                                            <label htmlFor={"starter2-index-" + index}>{BRUSCHETTA}
+                                                                                </label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <br/>
                                                                 <div className="rsvp-row">
-                                                                    <div className="rsvp-col-25">
+                                                                <div className="rsvp-col-25">
                                                                         <label>Their Main: </label>
                                                                     </div>
                                                                     <div className="rsvp-col-75">
                                                                         <div className="rsvp-starter-toggle">
                                                                             <input type="radio" name={"main" + index}
-                                                                                   value="main1"
+                                                                                   value={TIKKA_MASALA}
                                                                                    id={"main1-index-" + index}
                                                                                    data-index={index}
                                                                                    onChange={handleNestedInputChange}/>
-                                                                            <label htmlFor={"main1-index-" + index}>main
-                                                                                1</label>
+                                                                            <label htmlFor={"main1-index-" + index}>{TIKKA_MASALA}</label>
                                                                             <input type="radio" name={"main" + index}
-                                                                                   value="main2"
+                                                                                   value={LASAGNE}
                                                                                    data-index={index}
                                                                                    id={"main2-index-" + index}
                                                                                    onChange={handleNestedInputChange}/>
-                                                                            <label htmlFor={"main2-index-" + index}>main
-                                                                                2</label>
+                                                                            <label htmlFor={"main2-index-" + index}>{LASAGNE}</label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -414,19 +409,17 @@ const FormExample = () => {
                                                                     <div className="rsvp-col-75">
                                                                         <div className="rsvp-starter-toggle">
                                                                             <input type="radio" name={"dessert" + index}
-                                                                                   value="dessert1"
+                                                                                   value={BRIOCHE_AND_BUTTER}
                                                                                    id={"dessert1-index-" + index}
                                                                                    onChange={handleNestedInputChange}
                                                                                    data-index={index}/>
-                                                                            <label htmlFor={"dessert1-index-" + index}>dessert
-                                                                                1</label>
+                                                                            <label htmlFor={"dessert1-index-" + index}>{BRIOCHE_AND_BUTTER}</label>
                                                                             <input type="radio" name={"dessert" + index}
-                                                                                   value="dessert2"
+                                                                                   value={TIRAMISU}
                                                                                    id={"dessert2-index-" + index}
                                                                                    onChange={handleNestedInputChange}
                                                                                    data-index={index}/>
-                                                                            <label htmlFor={"dessert2-index-" + index}>dessert
-                                                                                2</label>
+                                                                            <label htmlFor={"dessert2-index-" + index}>{TIRAMISU}</label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -443,7 +436,7 @@ const FormExample = () => {
                                 <div className="rsvp-add-person-button-div">
                                     <button type="button" onClick={handleAddPerson} className="rsvp-add-person-button">I
                                         want to
-                                        RSVP for another Person
+                                        RSVP for another person
                                     </button>
                                 </div>
                             </div>

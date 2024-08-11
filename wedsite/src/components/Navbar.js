@@ -17,7 +17,6 @@ function isMob() {
 }
 
 // TODO: scripts to interact with DB
-// TODO: switch to light mode on mobile
 function getMopOrRory(){
     if (window.location.href.toLowerCase().includes("mop")){
         document.title = 'Mop and Ellie';

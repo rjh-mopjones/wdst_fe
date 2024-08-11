@@ -42,7 +42,7 @@ const Itinerary = () => {
                 </div>
                 <div className={"itinerary-text"}>
                     <h2>
-                        We will have a more fine-grained Itinerary closer to the time
+                        We will have a more detailed Itinerary closer to the time
                     </h2>
                     <br/>
                     <br/>
