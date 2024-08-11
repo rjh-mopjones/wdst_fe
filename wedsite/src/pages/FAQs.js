@@ -38,7 +38,7 @@ const FAQs= () => {
                 </Accordion.Item>
                 <Accordion.Item value="item-8">
                     <AccordionControl>Are there plus 1s?</AccordionControl>
-                    <Accordion.Panel>For planing (and mainly budget) reasons, we are not offering +1s up front. We might have spaces closer to the time depending on RSVPs</Accordion.Panel>
+                    <Accordion.Panel>For planning (and mainly budget) reasons, we are not offering +1s up front. We might have spaces closer to the time depending on RSVPs</Accordion.Panel>
                 </Accordion.Item>
                 <Accordion.Item value="item-9">
                     <AccordionControl>How do I get there?</AccordionControl>

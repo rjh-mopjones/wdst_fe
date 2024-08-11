@@ -90,7 +90,6 @@ const FormExample = () => {
         let unpackedFormData = unpackFormData(formData)
         unpackedFormData.additionalRSVP = additionalFormData;
         setNotSubmitted(false)
-        console.log(formData)
 
 
         let username = (formData.fullName.split(" ")[0])
