@@ -174,6 +174,9 @@ const FormExample = () => {
                         <div id="rsvp-reveal">
                             <br/>
                             <div className="rsvp-row">
+                                All food is vegetarian
+                            </div>
+                            <div className="rsvp-row">
                                 <div className="rsvp-col-25">
                                     <label> Starter: </label>
                                 </div>
