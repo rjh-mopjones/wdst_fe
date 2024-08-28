@@ -6,7 +6,7 @@ const FormExample = () => {
 
     const GYOZAS = "Gyozas"
     const BRUSCHETTA = "Bruschetta"
-    const TIKKA_MASALA = "Vegetable Tikka Masala with all the trimmings"
+    const TIKKA_MASALA = "Tikka Masala with all the trimmings"
     const LASAGNE = "Lasagne with Garlic Bread, Salad and Coleslaw"
     const BRIOCHE_AND_BUTTER = "White Chocolate and Raspberry Brioche and Butter Pudding"
     const TIRAMISU = "Tiramisu"
@@ -184,7 +184,7 @@ const FormExample = () => {
                                     <div className="rsvp-starter-toggle">
                                         <input type="radio" name="starter" value={GYOZAS}
                                                checked={formData.starter === GYOZAS} id="starter1"
-                                               onChange={handleInputChange}/>
+                                               onChange={handleInputChange} required/>
                                         <label htmlFor="starter1">{GYOZAS}</label>
                                         <input type="radio" name="starter" value={BRUSCHETTA}
                                                checked={formData.starter === BRUSCHETTA} id="starter2"
@@ -206,7 +206,7 @@ const FormExample = () => {
                                         <label htmlFor="main1">{TIKKA_MASALA}</label>
                                         <input type="radio" name="main" value={LASAGNE} id="main2"
                                                checked={formData.main === LASAGNE}
-                                               onChange={handleInputChange}/>
+                                               onChange={handleInputChange} required/>
                                         <label htmlFor="main2">{LASAGNE}</label>
                                     </div>
                                 </div>
@@ -224,7 +224,7 @@ const FormExample = () => {
                                         <label htmlFor="dessert1">{BRIOCHE_AND_BUTTER}</label>
                                         <input type="radio" name="dessert" value={TIRAMISU} id="dessert2"
                                                checked={formData.dessert === TIRAMISU}
-                                               onChange={handleInputChange}/>
+                                               onChange={handleInputChange} required/>
                                         <label htmlFor="dessert2">{TIRAMISU}</label>
                                     </div>
                                 </div>

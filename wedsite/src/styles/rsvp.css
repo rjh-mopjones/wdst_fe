@@ -227,10 +227,8 @@ button[type=submit]:hover {
 }
 .rsvp-starter-toggle input {
     width: 0;
-    outline: 2px solid var(--color-border);
     height: 0;
-    position: absolute;
-    left: -9999px;
+    opacity: 0;
 }
 .rsvp-starter-toggle input + label {
     margin: 0;
@@ -274,6 +272,7 @@ button[type=submit]:hover {
     outline: dotted 1px #CCC;
     outline-offset: 0.45rem;
 }
+
 @media (max-width: 800px) {
     .rsvp-starter-toggle input + label {
         padding: 0.75rem 0.25rem;
