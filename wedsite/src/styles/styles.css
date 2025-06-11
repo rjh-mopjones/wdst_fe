@@ -63,8 +63,8 @@ iframe#webpack-dev-server-client-overlay {
 }
 
 .it-photo-mob{
-    max-width: 80%;
-    margin: auto;
+    max-width: 50%;
+    margin-left: 10%;
 }
 .itinerary-text-mob {
     margin-right: 10%;

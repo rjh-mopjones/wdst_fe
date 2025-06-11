@@ -45,12 +45,6 @@ const Directions = () => {
                         <h2>Driving</h2>
                         <br/>
                         <p>There will be parking available on site for people who are driving.</p>
-                        <br/>
-                        <br/>
-                        <h2>Coaches</h2>
-                        <br/>
-                        <p>We are looking at providing coaches from Newport and Abergavenny,
-                            these will be organised closer to the time and we will let you know!</p>
                     </div>
                 </div>
                 :
@@ -80,10 +74,6 @@ const Directions = () => {
                         <p>There will be parking available on site for people who are driving</p>
                         <br/>
                         <br/>
-                        <h2>Coaches</h2>
-                        <br/>
-                        <p>We are looking at providing coaches from Newport and Abergavenny,
-                            these will be organised closer to the time and we will let you know!</p>
                     </div>
                 </div>
             }

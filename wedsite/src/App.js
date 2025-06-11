@@ -14,6 +14,7 @@ import './styles/styles.css';
 import './styles/rsvp.css';
 import './styles/registry.css';
 import './styles/accommodation.css';
+import './styles/itinerary.css';
 import './styles/navbar.css';
 import '@mantine/core/styles/Accordion.css';
 import FAQs from "./pages/FAQs";

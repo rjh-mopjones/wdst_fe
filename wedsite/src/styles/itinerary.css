@@ -1,0 +1,23 @@
+
+.initerary-list-container li {
+    margin-bottom: 12px; /* Adjust as needed */
+    list-style-type: none;
+    padding-left: 0;             /* remove default indentation */
+    text-align: left;
+}
+
+.initerary-list-container {
+    padding-left: 60%;
+    padding-top: 5%;
+}
+
+.itinerary-taxis {
+    padding: 10%;
+}
+
+.initerary-list-container-mob li {
+    margin-bottom: 12px; /* Adjust as needed */
+    list-style-type: none;
+    padding-left: 0;             /* remove default indentation */
+    text-align: center;
+}
